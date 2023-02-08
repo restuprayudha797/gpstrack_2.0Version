@@ -55,7 +55,7 @@
             Forget Password?
           </a>
           <p class="signup-option">
-            Not a member yet? <a href="javascript:void(0)"> Sign Up </a>
+            Not a member yet? <a href="<?= base_url('auth/Register') ?>"> Sign Up </a>
           </p>
         </div>
       </div>

@@ -18,14 +18,13 @@ class Auth extends CI_Controller
         $this->load->view('layout/footer');
     }
 
-    public function test()
+    public function Register()
     {
-        $data['title'] = "Login Page";
+        $data['title'] = "Register";
 
         $this->load->view('layout/header', $data);
         $this->load->view('layout/navbar', $data);
         $this->load->view('auth/index', $data);
         $this->load->view('layout/footer');
     }
-
 }
