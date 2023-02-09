@@ -23,7 +23,7 @@
                 </li>
 
                 <li class="nav-item">
-                  <a class="ud-menu-scroll" href="#about">Features</a>
+                  <a class="ud-menu-scroll" href="#features">Features</a>
                 </li>
                 <li class="nav-item">
                   <a class="ud-menu-scroll" href="#pricing">Pricing</a>
@@ -34,7 +34,7 @@
                 <li class="nav-item">
                   <a class="ud-menu-scroll" href="#contact">Contact</a>
                 </li>
-                <li class="nav-item nav-item-has-children">
+                <!-- <li class="nav-item nav-item-has-children">
                   <a href="javascript:void(0)"> Pages </a>
                   <ul class="ud-submenu">
                     <li class="ud-submenu-item">
@@ -71,15 +71,16 @@
                       <a href="404.html" class="ud-submenu-link">404 Page</a>
                     </li>
                   </ul>
-                </li>
+                </li> -->
               </ul>
             </div>
 
             <div class="navbar-btn d-none d-sm-inline-block">
-              <a class="ud-main-btn ud-white-btn" href="javascript:void(0)">
+              <a class="ud-main-btn ud-white-btn" href="<?= base_url('auth') ?>">
                 Sign Up
               </a>
             </div>
+
           </nav>
         </div>
       </div>
