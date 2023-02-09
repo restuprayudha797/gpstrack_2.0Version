@@ -21,7 +21,6 @@
                 <li class="nav-item">
                   <a class="ud-menu-scroll" href="#home">Home</a>
                 </li>
-
                 <li class="nav-item">
                   <a class="ud-menu-scroll" href="#features">Features</a>
                 </li>
@@ -77,7 +76,7 @@
 
             <div class="navbar-btn d-none d-sm-inline-block">
               <a class="ud-main-btn ud-white-btn" href="<?= base_url('auth') ?>">
-                Sign Up
+                Sign In
               </a>
             </div>
 

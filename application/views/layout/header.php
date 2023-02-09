@@ -26,13 +26,13 @@
     <meta property="twitter:image" content="https://uideck.com/wp-content/uploads/2021/09/play-meta-bs.jpg" />
 
     <!--====== Favicon Icon ======-->
-    <link rel="shortcut icon" href="assets/images/favicon.svg" type="image/svg" />
+    <link rel="shortcut icon" href="<?= base_url('assets/') ?>images/favicon.svg" type="image/svg" />
 
     <!-- ===== All CSS files ===== -->
     <link rel="stylesheet" href="<?= base_url('assets/') ?>css/bootstrap.min.css" />
-    <link rel="stylesheet" href="<?= base_url('assets/') ?>/css/animate.css" />
-    <link rel="stylesheet" href="<?= base_url('assets/') ?>/css/lineicons.css" />
-    <link rel="stylesheet" href="<?= base_url('assets/') ?>/css/ud-styles.css" />
+    <link rel="stylesheet" href="<?= base_url('assets/') ?>css/animate.css" />
+    <link rel="stylesheet" href="<?= base_url('assets/') ?>css/lineicons.css" />
+    <link rel="stylesheet" href="<?= base_url('assets/') ?>css/ud-styles.css" />
 </head>
 
 <body>

@@ -5,7 +5,7 @@
 	Author URI: https://uideck.com/
 	Support: https://github.com/uideck/
 	Version: 1.0
-ud-feature-icon
+	
 ======== */
 /*===========================
   COMMON css 
@@ -15,7 +15,7 @@ ud-feature-icon
 	--font: "Inter", sans-serif;
 	--body-color: #637381;
 	--heading-color: #212b36;
-	--primary-color: #3056d3;
+	--primary-color: #377dff;
 	--white: #ffffff;
 }
 
@@ -729,7 +729,7 @@ p {
 }
 
 .ud-single-feature .ud-feature-icon {
-  margin: auto;
+	margin: auto;
 	width: 70px;
 	height: 70px;
 	display: -webkit-box;
