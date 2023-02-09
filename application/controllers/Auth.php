@@ -10,7 +10,7 @@ class Auth extends CI_Controller
 
     public function index()
     {
-        $data['title'] = "Login Page";
+        $data['title'] = "Login";
 
         $this->load->view('layout/header', $data);
         $this->load->view('layout/navbar', $data);
@@ -24,7 +24,7 @@ class Auth extends CI_Controller
 
         $this->load->view('layout/header', $data);
         $this->load->view('layout/navbar', $data);
-        $this->load->view('auth/index', $data);
+        $this->load->view('auth/register', $data);
         $this->load->view('layout/footer');
     }
 }

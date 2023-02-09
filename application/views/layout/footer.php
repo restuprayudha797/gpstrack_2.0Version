@@ -1,10 +1,10 @@
   <!-- ====== Footer Start ====== -->
   <footer class="ud-footer wow fadeInUp" data-wow-delay=".15s">
     <div class="shape shape-2">
-      <img src="assets/images/footer/shape-2.svg" alt="shape" />
+      <img src="<?= base_url('assets/') ?>images/footer/shape-2.svg" alt="shape" />
     </div>
     <div class="shape shape-3">
-      <img src="assets/images/footer/shape-3.svg" alt="shape" class="opacity-50"/>
+      <img src="<?= base_url('assets/') ?>images/footer/shape-3.svg" alt="shape" class="opacity-50"/>
     </div>
     <div class="ud-footer-widgets">
       <div class="container">
@@ -170,15 +170,15 @@
   <!-- ====== Footer End ====== -->
 
   <!-- ====== Back To Top Start ====== -->
-  <a href="javascript:void(0)" class="back-to-top">
+  <!-- <a href="javascript:void(0)" class="back-to-top">
     <i class="lni lni-chevron-up"> </i>
-  </a>
+  </a> -->
   <!-- ====== Back To Top End ====== -->
 
   <!-- ====== All Javascript Files ====== -->
-  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="<?= base_url('assets/') ?>js/bootstrap.bundle.min.js"></script>
   <!-- <script src="assets/js/wow.min.js"></script> -->
-  <script src="assets/js/main.js"></script>
+  <script src="<?= base_url('assets/') ?>js/main.js"></script>
   <script>
     // ==== for menu scroll
     const pageLink = document.querySelectorAll(".ud-menu-scroll");
