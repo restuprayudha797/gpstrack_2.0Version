@@ -4,9 +4,8 @@
       <div class="row">
         <div class="col-lg-12">
           <nav class="navbar navbar-expand-lg">
-            <a class="navbar-brand" href="index.html">
-              <!-- <img src="assets/images/logo/logo.svg" alt="Logo" /> -->
-              <h1 class="h3 text-light">GPS Track</h1>
+            <a class="navbar-brand" href="<?= base_url('home') ?>">
+              <img class="py-3" src="<?= base_url('assets/img/logo-light.png') ?>" alt="Logo" />
             </a>
             <!-- Hamburger -->
             <button class="navbar-toggler">
@@ -19,19 +18,19 @@
             <div class="navbar-collapse">
               <ul id="nav" class="navbar-nav mx-auto">
                 <li class="nav-item">
-                  <a class="ud-menu-scroll" href="#home">Home</a>
+                  <a href="<?= base_url('home') ?>#home">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="ud-menu-scroll" href="#features">Features</a>
+                  <a href="<?= base_url('home') ?>#features">Features</a>
                 </li>
                 <li class="nav-item">
-                  <a class="ud-menu-scroll" href="#pricing">Pricing</a>
+                  <a href="<?= base_url('home') ?>#pricing">Pricing</a>
                 </li>
                 <li class="nav-item">
-                  <a class="ud-menu-scroll" href="#team">Team</a>
+                  <a href="<?= base_url('home') ?>#team">Team</a>
                 </li>
                 <li class="nav-item">
-                  <a class="ud-menu-scroll" href="#contact">Contact</a>
+                  <a href="<?= base_url('home') ?>#contact">Contact</a>
                 </li>
                 <!-- <li class="nav-item nav-item-has-children">
                   <a href="javascript:void(0)"> Pages </a>

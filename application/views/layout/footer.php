@@ -104,7 +104,7 @@
           <div class="col-xl-3 col-lg-6 col-md-8 col-sm-10">
             <div class="ud-widget">
               <h5 class="ud-widget-title">Partners</h5>
-              <ul class="ud-widget-brands">
+              <!-- <ul class="ud-widget-brands">
                 <li>
                   <a href="https://ayroui.com/" rel="nofollow noopner" target="_blank">
                     <img src="assets/images/footer/brands/ayroui.svg" alt="ayroui" />
@@ -135,7 +135,7 @@
                     <img src="assets/images/footer/brands/tailwindtemplates.svg" alt="tailwindtemplates" />
                   </a>
                 </li>
-              </ul>
+              </ul> -->
             </div>
           </div>
         </div>

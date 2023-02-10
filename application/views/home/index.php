@@ -45,7 +45,7 @@
       <div class="row text-center">
         <div class="col-xl-3 col-lg-3 col-sm-6">
           <div class="ud-single-feature wow fadeInUp" data-wow-delay=".1s">
-            <div class="ud-feature-icon mx-auto">
+            <div class="ud-feature-icon mx-auto mb-4">
               <i class="lni lni-gift"></i>
             </div>
             <div class="ud-feature-content">
@@ -61,7 +61,7 @@
         </div>
         <div class="col-xl-3 col-lg-3 col-sm-6">
           <div class="ud-single-feature wow fadeInUp" data-wow-delay=".15s">
-            <div class="ud-feature-icon mx-auto">
+            <div class="ud-feature-icon mx-auto mb-4">
               <i class="lni lni-move"></i>
             </div>
             <div class="ud-feature-content">
@@ -77,7 +77,7 @@
         </div>
         <div class="col-xl-3 col-lg-3 col-sm-6">
           <div class="ud-single-feature wow fadeInUp" data-wow-delay=".2s">
-            <div class="ud-feature-icon mx-auto">
+            <div class="ud-feature-icon mx-auto mb-4">
               <i class="lni lni-layout"></i>
             </div>
             <div class="ud-feature-content">
@@ -93,7 +93,7 @@
         </div>
         <div class="col-xl-3 col-lg-3 col-sm-6">
           <div class="ud-single-feature wow fadeInUp" data-wow-delay=".25s">
-            <div class="ud-feature-icon mx-auto">
+            <div class="ud-feature-icon mx-auto mb-4">
               <i class="lni lni-layers"></i>
             </div>
             <div class="ud-feature-content">
