@@ -28,6 +28,9 @@
     <!--====== Favicon Icon ======-->
     <link rel="shortcut icon" href="<?= base_url('assets/') ?>images/favicon.svg" type="image/svg" />
 
+    <!--====== Tiny Slider Css ======-->
+    <link rel="stylesheet" href="https://cdn.ayroui.com/1.0/css/tiny-slider.css" />
+
     <!-- ===== All CSS files ===== -->
     <link rel="stylesheet" href="<?= base_url('assets/') ?>css/bootstrap.min.css" />
     <link rel="stylesheet" href="<?= base_url('assets/') ?>css/animate.css" />

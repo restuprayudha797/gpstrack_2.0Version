@@ -4,7 +4,7 @@
       <img src="<?= base_url('assets/') ?>images/footer/shape-2.svg" alt="shape" />
     </div>
     <div class="shape shape-3">
-      <img src="<?= base_url('assets/') ?>images/footer/shape-3.svg" alt="shape" class="opacity-50"/>
+      <img src="<?= base_url('assets/') ?>images/footer/shape-3.svg" alt="shape" class="opacity-50" />
     </div>
     <div class="ud-footer-widgets">
       <div class="container">
@@ -177,8 +177,44 @@
 
   <!-- ====== All Javascript Files ====== -->
   <script src="<?= base_url('assets/') ?>js/bootstrap.bundle.min.js"></script>
-  <!-- <script src="assets/js/wow.min.js"></script> -->
+  <script src="<?= base_url('assets/') ?>js/wow.min.js"></script>
   <script src="<?= base_url('assets/') ?>js/main.js"></script>
+
+  <!--====== Tiny Slider js ======-->
+  <script src="https://cdn.ayroui.com/1.0/js/tiny-slider.js"></script>
+
+  <script>
+    //======== tiny slider for slider-items-active
+    tns({
+      autoplay: true,
+      autoplayButtonOutput: false,
+      mouseDrag: true,
+      gutter: 0,
+      container: ".slider-items-active",
+      center: false,
+      nav: true,
+      navPosition: "bottom",
+      controls: false,
+      speed: 400,
+      controlsText: [
+        '<i class="lni lni-arrow-left-circle"></i>',
+        '<i class="lni lni-arrow-right-circle"></i>',
+      ],
+      responsive: {
+        0: {
+          items: 1,
+        },
+
+        768: {
+          items: 2,
+        },
+        992: {
+          items: 3,
+        },
+      },
+    });
+  </script>
+
   <script>
     // ==== for menu scroll
     const pageLink = document.querySelectorAll(".ud-menu-scroll");

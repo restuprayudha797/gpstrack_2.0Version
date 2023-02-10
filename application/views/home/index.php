@@ -378,6 +378,60 @@
   </section>
   <!-- ====== FAQ End ====== -->
 
+
+  <!--====== SLIDER THREE PART START ======-->
+
+  <section class="slider-three">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-6">
+          <div class="section-title text-center">
+            <h3 class="title">How to use?</h3>
+            <p class="text">
+              Stop wasting time and money designing and managing a website
+              that doesn’t get results. Happiness guaranteed!
+            </p>
+          </div>
+          <!-- section title -->
+        </div>
+      </div>
+      <!-- row -->
+
+      <div class="slider-items-wrapper">
+        <div class="row slider-items-active">
+          <div class="col-lg-4">
+            <div class="single-items-one">
+              <img src="https://cdn.ayroui.com/1.0/images/slider/slider-items-one.jpg" alt="Image" />
+            </div>
+            <!-- single-items-one -->
+          </div>
+          <div class="col-lg-4">
+            <div class="single-items-one">
+              <img src="https://cdn.ayroui.com/1.0/images/slider/slider-items-two.jpg" alt="Image" />
+            </div>
+            <!-- single-items-one -->
+          </div>
+          <div class="col-lg-4">
+            <div class="single-items-one">
+              <img src="https://cdn.ayroui.com/1.0/images/slider/slider-items-three.jpg" alt="Image" />
+            </div>
+            <!-- single-items-one -->
+          </div>
+          <div class="col-lg-4">
+            <div class="single-items-one">
+              <img src="https://cdn.ayroui.com/1.0/images/slider/slider-items-two.jpg" alt="Image" />
+            </div>
+            <!-- single-items-one -->
+          </div>
+        </div>
+        <!-- row -->
+      </div>
+    </div>
+    <!-- container -->
+  </section>
+
+  <!--====== SLIDER THREE PART ENDS ======-->
+
   <!-- ====== Testimonials Start ====== -->
   <section id="testimonials" class="ud-testimonials">
     <div class="container">
