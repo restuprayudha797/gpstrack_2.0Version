@@ -17,21 +17,40 @@
 
             <div class="navbar-collapse">
               <ul id="nav" class="navbar-nav mx-auto">
-                <li class="nav-item">
-                  <a href="<?= base_url('home') ?>#home">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a href="<?= base_url('home') ?>#features">Features</a>
-                </li>
-                <li class="nav-item">
-                  <a href="<?= base_url('home') ?>#pricing">Pricing</a>
-                </li>
-                <li class="nav-item">
-                  <a href="<?= base_url('home') ?>#team">Team</a>
-                </li>
-                <li class="nav-item">
-                  <a href="<?= base_url('home') ?>#contact">Contact</a>
-                </li>
+                <?php if ($title == "Home Page") : ?>
+                  <li class="nav-item">
+                    <a class="ud-menu-scroll" href="#home">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="ud-menu-scroll" href="#features">Features</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="ud-menu-scroll" href="#pricing">Pricing</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="ud-menu-scroll" href="#team">Team</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="ud-menu-scroll" href="#contact">Contact</a>
+                  </li>
+                <?php else : ?>
+                  <li class="nav-item">
+                    <a href="<?= base_url('home') ?>#home">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="<?= base_url('home') ?>#features">Features</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="<?= base_url('home') ?>#pricing">Pricing</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="<?= base_url('home') ?>#team">Team</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="<?= base_url('home') ?>#contact">Contact</a>
+                  </li>
+
+                <?php endif; ?>
                 <!-- <li class="nav-item nav-item-has-children">
                   <a href="javascript:void(0)"> Pages </a>
                   <ul class="ud-submenu">

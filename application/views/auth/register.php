@@ -4,8 +4,8 @@
     <div class="row">
       <div class="col-lg-12">
         <div class="ud-banner-content">
-          <h1>Create Account</h1>
-          <p class="text-light fs-1 fw-lighter pt-3">to get started now!</p>
+          <h1 class="wow fadeInUp" data-wow-delay=".2s">Create Account</h1>
+          <p class="text-light fs-1 fw-lighter pt-3 wow fadeInUp" data-wow-delay=".25s">to get started now!</p>
         </div>
       </div>
     </div>
@@ -44,7 +44,7 @@
             </div>
           </div>
           <div class="ud-form-group">
-            <button type="submit" class="ud-main-btn w-100">Login</button>
+            <button type="submit" class="ud-main-btn w-100">Register</button>
           </div>
         </form>
         <div class="text-center">

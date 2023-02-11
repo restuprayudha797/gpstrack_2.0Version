@@ -4,8 +4,8 @@
     <div class="row">
       <div class="col-lg-12">
         <div class="ud-banner-content">
-          <h1>Welcome👋</h1>
-          <p class="text-light fs-1 fw-lighter pt-3">Glad to see you!</p>
+          <h1 class="wow fadeInUp" data-wow-delay=".2s">Welcome👋</h1>
+          <p class="text-light fs-1 fw-lighter pt-3 wow fadeInUp" data-wow-delay=".25s">Glad to see you!</p>
         </div>
       </div>
     </div>

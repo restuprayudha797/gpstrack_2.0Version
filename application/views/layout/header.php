@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Play | Free Startup and SaaS Landing Page Template by UIdeck</title>
+    <title><?= $title; ?></title>
 
     <!-- Primary Meta Tags -->
     <meta name="title" content="Play - Free Open Source HTML Bootstrap Template by UIdeck" />
@@ -27,9 +27,6 @@
 
     <!--====== Favicon Icon ======-->
     <link rel="shortcut icon" href="<?= base_url('assets/') ?>images/favicon.svg" type="image/svg" />
-
-    <!--====== Tiny Slider Css ======-->
-    <link rel="stylesheet" href="https://cdn.ayroui.com/1.0/css/tiny-slider.css" />
 
     <!-- ===== All CSS files ===== -->
     <link rel="stylesheet" href="<?= base_url('assets/') ?>css/bootstrap.min.css" />

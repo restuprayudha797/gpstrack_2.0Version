@@ -262,7 +262,7 @@
                 <span class="icon flex-shrink-0">
                   <i class="lni lni-chevron-down"></i>
                 </span>
-                <span>How to use UIdeck?</span>
+                <span>How to use Shield Track?</span>
               </button>
               <div id="collapseOne" class="accordion-collapse collapse">
                 <div class="ud-faq-body">
@@ -378,62 +378,8 @@
   </section>
   <!-- ====== FAQ End ====== -->
 
-
-  <!--====== SLIDER THREE PART START ======-->
-
-  <section class="slider-three">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-6">
-          <div class="section-title text-center">
-            <h3 class="title">How to use?</h3>
-            <p class="text">
-              Stop wasting time and money designing and managing a website
-              that doesn’t get results. Happiness guaranteed!
-            </p>
-          </div>
-          <!-- section title -->
-        </div>
-      </div>
-      <!-- row -->
-
-      <div class="slider-items-wrapper">
-        <div class="row slider-items-active">
-          <div class="col-lg-4">
-            <div class="single-items-one">
-              <img src="https://cdn.ayroui.com/1.0/images/slider/slider-items-one.jpg" alt="Image" />
-            </div>
-            <!-- single-items-one -->
-          </div>
-          <div class="col-lg-4">
-            <div class="single-items-one">
-              <img src="https://cdn.ayroui.com/1.0/images/slider/slider-items-two.jpg" alt="Image" />
-            </div>
-            <!-- single-items-one -->
-          </div>
-          <div class="col-lg-4">
-            <div class="single-items-one">
-              <img src="https://cdn.ayroui.com/1.0/images/slider/slider-items-three.jpg" alt="Image" />
-            </div>
-            <!-- single-items-one -->
-          </div>
-          <div class="col-lg-4">
-            <div class="single-items-one">
-              <img src="https://cdn.ayroui.com/1.0/images/slider/slider-items-two.jpg" alt="Image" />
-            </div>
-            <!-- single-items-one -->
-          </div>
-        </div>
-        <!-- row -->
-      </div>
-    </div>
-    <!-- container -->
-  </section>
-
-  <!--====== SLIDER THREE PART ENDS ======-->
-
   <!-- ====== Testimonials Start ====== -->
-  <section id="testimonials" class="ud-testimonials">
+  <!-- <section id="testimonials" class="ud-testimonials">
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
@@ -555,7 +501,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
   <!-- ====== Testimonials End ====== -->
 
   <!-- ====== Team Start ====== -->
@@ -575,7 +521,7 @@
       </div>
 
       <div class="row">
-        <div class="col-xl-3 col-lg-3 col-sm-6">
+        <div class="col-xl-4 col-lg-4 col-sm-6">
           <div class="ud-single-team wow fadeInUp" data-wow-delay=".1s">
             <div class="ud-team-image-wrapper">
               <div class="ud-team-image">
@@ -608,7 +554,7 @@
             </ul>
           </div>
         </div>
-        <div class="col-xl-3 col-lg-3 col-sm-6">
+        <div class="col-xl-4 col-lg-4 col-sm-6">
           <div class="ud-single-team wow fadeInUp" data-wow-delay=".15s">
             <div class="ud-team-image-wrapper">
               <div class="ud-team-image">
@@ -641,7 +587,7 @@
             </ul>
           </div>
         </div>
-        <div class="col-xl-3 col-lg-3 col-sm-6">
+        <div class="col-xl-4 col-lg-4 col-sm-6">
           <div class="ud-single-team wow fadeInUp" data-wow-delay=".2s">
             <div class="ud-team-image-wrapper">
               <div class="ud-team-image">
@@ -654,39 +600,6 @@
             <div class="ud-team-info">
               <h5>Andrieo Gloree</h5>
               <h6>App Developer</h6>
-            </div>
-            <ul class="ud-team-socials">
-              <li>
-                <a href="https://twitter.com/MusharofChy">
-                  <i class="lni lni-facebook-filled"></i>
-                </a>
-              </li>
-              <li>
-                <a href="https://twitter.com/MusharofChy">
-                  <i class="lni lni-twitter-filled"></i>
-                </a>
-              </li>
-              <li>
-                <a href="https://twitter.com/MusharofChy">
-                  <i class="lni lni-instagram-filled"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-xl-3 col-lg-3 col-sm-6">
-          <div class="ud-single-team wow fadeInUp" data-wow-delay=".25s">
-            <div class="ud-team-image-wrapper">
-              <div class="ud-team-image">
-                <img src="assets/images/team/team-04.png" alt="team" />
-              </div>
-
-              <img src="assets/images/team/dotted-shape.svg" alt="shape" class="shape shape-1" />
-              <img src="assets/images/team/shape-2.svg" alt="shape" class="shape shape-2" />
-            </div>
-            <div class="ud-team-info">
-              <h5>Jackie Sanders</h5>
-              <h6>Content Writer</h6>
             </div>
             <ul class="ud-team-socials">
               <li>

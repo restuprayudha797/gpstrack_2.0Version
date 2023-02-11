@@ -12,7 +12,7 @@
           <div class="col-xl-3 col-lg-4 col-md-6">
             <div class="ud-widget">
               <a href="index.html" class="ud-footer-logo">
-                <img src="assets/images/logo/logo.svg" alt="logo" />
+                <img class="py-3" src="<?= base_url('assets/img/logo-dark.webp') ?>" alt="Logo" />
               </a>
               <p class="ud-widget-desc">
                 We create digital experiences for brands and companies by
@@ -179,41 +179,6 @@
   <script src="<?= base_url('assets/') ?>js/bootstrap.bundle.min.js"></script>
   <script src="<?= base_url('assets/') ?>js/wow.min.js"></script>
   <script src="<?= base_url('assets/') ?>js/main.js"></script>
-
-  <!--====== Tiny Slider js ======-->
-  <script src="https://cdn.ayroui.com/1.0/js/tiny-slider.js"></script>
-
-  <script>
-    //======== tiny slider for slider-items-active
-    tns({
-      autoplay: true,
-      autoplayButtonOutput: false,
-      mouseDrag: true,
-      gutter: 0,
-      container: ".slider-items-active",
-      center: false,
-      nav: true,
-      navPosition: "bottom",
-      controls: false,
-      speed: 400,
-      controlsText: [
-        '<i class="lni lni-arrow-left-circle"></i>',
-        '<i class="lni lni-arrow-right-circle"></i>',
-      ],
-      responsive: {
-        0: {
-          items: 1,
-        },
-
-        768: {
-          items: 2,
-        },
-        992: {
-          items: 3,
-        },
-      },
-    });
-  </script>
 
   <script>
     // ==== for menu scroll
