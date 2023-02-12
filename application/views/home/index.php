@@ -14,12 +14,14 @@
               Use gps tracking for the save of your motorcycle security
             </p>
           </div>
-          <div class="ud-hero-image wow fadeInUp" data-wow-delay=".25s">
-            <div class="bg-light px-2 rounded-top">
-              <img src="assets/images/new/GPS-Track.png" alt="hero-image" />
+          <div class="my-hero-image wow fadeInUp" data-wow-delay=".25s">
+            <!-- <div class="circle circle-1"></div> -->
+            <div class="circle circle-2">
+              <img src="<?= base_url('assets/') ?>img/gps.png" width="500px" alt="hero-image" />
             </div>
-            <img src="assets/images/hero/dotted-shape.svg" alt="shape" class="shape shape-1" />
-            <img src="assets/images/hero/dotted-shape.svg" alt="shape" class="shape shape-2" />
+            <!-- <div class="circle circle-3"></div> -->
+            <!-- <img src="<?= base_url('assets/') ?>images/hero/dotted-shape.svg" alt="shape" class="shape shape-1" /> -->
+            <!-- <img src="<?= base_url('assets/') ?>images/hero/dotted-shape.svg" alt="shape" class="shape shape-2" /> -->
           </div>
         </div>
       </div>
