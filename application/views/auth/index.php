@@ -20,6 +20,8 @@
         <div class="ud-login-logo text-center mb-3">
           <h1><?= $title; ?></h1>
         </div>
+        <?= $this->session->flashdata('auth_message'); ?>
+
         <form class="ud-login-form" action="" method="post">
           <div class="ud-form-group">
             <label for="email" class="form-label float-start">Email</label>

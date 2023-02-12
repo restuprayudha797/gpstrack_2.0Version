@@ -20,32 +20,48 @@
         <div class="ud-login-logo text-center mb-3">
           <h1><?= $title; ?></h1>
         </div>
-        <form class="ud-login-form" action="" method="post">
+        <form class="ud-login-form" action="<?= base_url('auth/register') ?>" method="post">
           <div class="ud-form-group">
             <label for="name" class="form-label float-start">Nama</label>
-            <input type="text" name="name" id="name" placeholder="Masukkan nama" />
+            <input type="text" name="name" id="name" autofocus autocomplete="OFF" value="<?php echo set_value('name'); ?>" placeholder="Masukkan nama" />
+            <i class="text-danger fw-light">
+              <?= form_error('name'); ?>
+            </i>
           </div>
           <div class="ud-form-group">
             <label for="email" class="form-label float-start">Email</label>
-            <input type="email" name="email" id="email" placeholder="example@gmail.com" />
+            <input type="email" name="email" id="email" autocomplete="OFF" value="<?php echo set_value('email'); ?>" placeholder="example@gmail.com" />
+            <i class="text-danger fw-light">
+              <?= form_error('email'); ?>
+            </i>
           </div>
           <div class="ud-form-group">
             <label for="contact" class="form-label float-start">No. Telepon</label>
-            <input type="text" name="contact" id="contact" placeholder="0801 2345 6789" />
+            <input type="text" name="contact" id="contact" autocomplete="OFF" value="<?php echo set_value('contact'); ?>" placeholder="081 234 679 101" />
+            <i class="text-danger fw-light">
+              <?= form_error('contact'); ?>
+            </i>
           </div>
           <div class="row">
             <div class="col ud-form-group">
               <label for="password" class="form-label float-start">Password</label>
               <input type="password" name="password" id="password" placeholder="*********" />
+              <i class="text-danger fw-light">
+                <?= form_error('password'); ?>
+              </i>
             </div>
             <div class="col-sm ud-form-group">
               <label for="password2" class="form-label float-start">Konfirmasi Password</label>
               <input type="password" name="password2" id="password2" placeholder="*********" />
+              <i class="text-danger fw-light">
+                <?= form_error('password2'); ?>
+              </i>
             </div>
           </div>
           <div class="ud-form-group">
             <button type="submit" class="ud-main-btn w-100">Register</button>
           </div>
+
         </form>
         <div class="text-center">
           <p class="signup-option">
