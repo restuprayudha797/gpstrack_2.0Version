@@ -17,10 +17,10 @@
 		// === logo change
 		if (ud_header.classList.contains("sticky")) {
 			logo.src =
-				"http://localhost/gpstrack_2.0Version/assets/img/logo-dark.webp";
+				"http://localhost/gpstrack_2.0Version/assets/img/logo-light.webp";
 		} else {
 			logo.src =
-				"http://localhost/gpstrack_2.0Version/assets/img/logo-light.webp";
+				"http://localhost/gpstrack_2.0Version/assets/img/logo-dark.webp";
 		}
 
 		// show or hide the back-top-top button

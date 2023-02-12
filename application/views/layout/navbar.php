@@ -5,7 +5,7 @@
         <div class="col-lg-12">
           <nav class="navbar navbar-expand-lg">
             <a class="navbar-brand" href="<?= base_url('home') ?>">
-              <img class="py-3" src="<?= base_url('assets/img/logo-light.png') ?>" alt="Logo" />
+              <img class="py-3" src="<?= base_url('assets/img/logo-dark.webp') ?>" alt="Logo" />
             </a>
             <!-- Hamburger -->
             <button class="navbar-toggler">
