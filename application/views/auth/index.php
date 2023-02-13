@@ -22,14 +22,17 @@
         </div>
         <?= $this->session->flashdata('auth_message'); ?>
 
-        <form class="ud-login-form" action="" method="post">
+        <form class="ud-login-form" action="<?= base_url('auth') ?>" method="post">
           <div class="ud-form-group">
             <label for="email" class="form-label float-start">Email</label>
-            <input type="email" name="email" id="email" placeholder="example@gmail.com" />
+            <input type="email" autofocus autocomplete="OFF" name="email" id="email" value="<?php echo set_value('email'); ?>" placeholder="example@gmail.com" />
+            <?= form_error('email'); ?>
+
           </div>
           <div class="ud-form-group">
             <label for="password" class="form-label float-start">Password</label>
             <input type="password" name="password" id="password" placeholder="*********" />
+            <?= form_error('password'); ?>
           </div>
           <div class="ud-form-group">
             <button type="submit" class="ud-main-btn w-100">Login</button>

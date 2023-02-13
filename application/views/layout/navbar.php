@@ -92,12 +92,23 @@
               </ul>
             </div>
 
-            <div class="navbar-btn d-none d-sm-inline-block">
-              <a class="ud-main-btn ud-white-btn" href="<?= base_url('auth') ?>">
-                Sign In
-              </a>
-            </div>
+            <?php if ($this->session->userdata('email')) : ?>
+              <div class="navbar-btn d-none d-sm-inline-block">
+                <a class="ud-main-btn ud-white-btn" href="<?= base_url('auth') ?>">
+                  Dashboard
+                </a>
+                <a class=" btn btn-danger" href="<?= base_url('logout') ?>">
+                  Logout
+                </a>
+              </div>
 
+            <?php else : ?>
+              <div class="navbar-btn d-none d-sm-inline-block">
+                <a class="ud-main-btn ud-white-btn" href="<?= base_url('auth') ?>">
+                  Sign In
+                </a>
+              </div>
+            <?php endif; ?>
           </nav>
         </div>
       </div>

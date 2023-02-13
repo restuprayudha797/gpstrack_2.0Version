@@ -3,20 +3,146 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Auth extends CI_Controller
 {
+
+    // ===== START CONSTRUCT FUNCTION =====
+
     public function __construct()
     {
         parent::__construct();
+
+
+        if ($this->session->userdata('email')) {
+
+            $user = $this->db->get_where('users', ['email' => $this->session->userdata('email')])->row_array();
+
+            if ($user['is_active'] == 1) {
+
+                if ($user['is_payment'] == 1) {
+                    redirect('user');
+                }
+            } elseif ($user['is_active'] == 2) {
+
+                redirect('admin');
+            } else {
+                $this->session->set_flashdata('auth_message', '<div class="alert alert-danger" role="alert">Akun anda belum diaktifasi, silahkan cek email dan lakukan aktifasi</div>');
+            }
+        }
     }
+
+    // ===== END CONSTRUCT FUNCTION =====
+
+
+
+
+
+    // ===== START LOGIN =====
 
     public function index()
     {
-        $data['title'] = "Login";
 
-        $this->load->view('layout/header', $data);
-        $this->load->view('layout/navbar', $data);
-        $this->load->view('auth/index', $data);
-        $this->load->view('layout/footer');
+        $this->form_validation->set_rules('email', 'Email', 'required|valid_email');
+        $this->form_validation->set_rules('password', 'Password', 'required|min_length[8]');
+
+
+        if ($this->form_validation->run() == FALSE) {
+
+            $data['title'] = "Login";
+
+            $this->load->view('layout/header', $data);
+            $this->load->view('layout/navbar', $data);
+            $this->load->view('auth/index', $data);
+            $this->load->view('layout/footer');
+        } else {
+
+            $this->_IsLogin();
+        }
     }
+
+    private function _IsLogin()
+    {
+        $email = $this->input->post('email', true);
+        $password = $this->input->post('password', true);
+
+        $user = $this->db->get_where('users', ['email' => $email])->row_array();
+
+        if ($user) {
+            // Check if the email entered by the user is in the database
+
+            // Check if the passwords match
+            if (password_verify($password, $user['password'])) {
+
+
+                // check the account whether it is active or not
+                if ($user['is_active'] == 1) {
+
+
+                    // Check if the user has made a payment
+                    if ($user['is_payment'] == 1) {
+                        // If it is already
+
+                        $data = [
+
+                            'email' => $user['email']
+
+
+                        ];
+
+                        $this->session->set_userdata($data);
+
+                        redirect('user');
+                    } else {
+                        // if not
+                        $data = [
+
+                            'email' => $user['email']
+
+                        ];
+
+                        $this->session->set_userdata($data);
+
+                        redirect('auth/payment');
+                    }
+                } elseif ($user['is_active'] == 2) {
+
+                    $data = [
+
+                        'email' => $user['email']
+
+                    ];
+
+                    $this->session->set_userdata($data);
+
+                    redirect('admin');
+                } else {
+                    $this->session->set_flashdata('auth_message', '<div class="alert alert-danger" role="alert">Akun anda belum diaktifasi, silahkan cek email dan lakukan aktifasi</div>');
+                    redirect('auth');
+                }
+            } else {
+                $this->session->set_flashdata('auth_message', '<div class="alert alert-danger" role="alert">Password yang anda masukkan tidak sesuai</div>');
+                redirect('auth');
+            }
+
+            // end check password
+
+
+        } else {
+            // notify the user the email entered does not exist
+
+            // notify user
+            $this->session->set_flashdata('auth_message', '<div class="alert alert-danger" role="alert"> Akun email yang anda masukkan tidak ditemukan</div>');
+            redirect('auth');
+        }
+    }
+
+
+    // ===== END LOGIN =====
+
+
+
+
+
+
+    // ===== START REGISTER =====
 
     public function Register()
     {
@@ -81,6 +207,15 @@ class Auth extends CI_Controller
         redirect('auth');
     }
 
+    // ===== END REGISTER =====
+
+
+
+
+
+
+    // ===== START SEND EMAIL =====
+
     private function _sendEmail($token, $type)
     {
 
@@ -123,6 +258,14 @@ class Auth extends CI_Controller
         }
     }
 
+    // ===== END SEND EMAIL =====
+
+
+
+
+
+
+    // ===== START VERIFY EMAIL ACCOUNT =====
 
     public function verify()
     {
@@ -171,4 +314,36 @@ class Auth extends CI_Controller
             redirect('auth');
         }
     }
+    // ===== END VERIFY EMAIL ACOUNT =====
+
+
+    // ===== START PAYMENT =====
+
+    public function payment()
+    {
+
+        if (!$this->session->userdata('email')) {
+
+            redirect('auth');
+        } else {
+
+            $user = $this->db->get_where('users', ['email' => $this->session->userdata('email')])->row_array();
+
+            if ($user['is_payment'] == 1) {
+                redirect('auth');
+            } else {
+
+                echo 1;
+            }
+        }
+    }
+    // ===== END PAYMENT =====
+
+
+
+
+
+
+
+
 }
