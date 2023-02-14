@@ -25,21 +25,21 @@
             <label for="name" class="form-label float-start">Nama</label>
             <input type="text" name="name" id="name" autofocus autocomplete="OFF" value="<?php echo set_value('name'); ?>" placeholder="Masukkan nama" />
             <i class="text-danger fw-light">
-              <?= form_error('name'); ?>
+            <?= form_error('name', '<small class="text-danger">', '</small>'); ?>
             </i>
           </div>
           <div class="ud-form-group">
             <label for="email" class="form-label float-start">Email</label>
             <input type="email" name="email" id="email" autocomplete="OFF" value="<?php echo set_value('email'); ?>" placeholder="example@gmail.com" />
             <i class="text-danger fw-light">
-              <?= form_error('email'); ?>
+            <?= form_error('email', '<small class="text-danger">', '</small>'); ?>
             </i>
           </div>
           <div class="ud-form-group">
             <label for="contact" class="form-label float-start">No. Telepon</label>
             <input type="text" name="contact" id="contact" autocomplete="OFF" value="<?php echo set_value('contact'); ?>" placeholder="081 234 679 101" />
             <i class="text-danger fw-light">
-              <?= form_error('contact'); ?>
+              <?= form_error('contact', '<small class="text-danger">', '</small>'); ?>
             </i>
           </div>
           <div class="row">
@@ -47,14 +47,14 @@
               <label for="password" class="form-label float-start">Password</label>
               <input type="password" name="password" id="password" placeholder="*********" />
               <i class="text-danger fw-light">
-                <?= form_error('password'); ?>
+              <?= form_error('password', '<small class="text-danger">', '</small>'); ?>
               </i>
             </div>
             <div class="col-sm ud-form-group">
               <label for="password2" class="form-label float-start">Konfirmasi Password</label>
               <input type="password" name="password2" id="password2" placeholder="*********" />
               <i class="text-danger fw-light">
-                <?= form_error('password2'); ?>
+              <?= form_error('password2', '<small class="text-danger">', '</small>'); ?>
               </i>
             </div>
           </div>

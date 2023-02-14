@@ -10,7 +10,6 @@ class Auth extends CI_Controller
     {
         parent::__construct();
 
-
         if ($this->session->userdata('email')) {
 
             $user = $this->db->get_where('users', ['email' => $this->session->userdata('email')])->row_array();
@@ -33,16 +32,13 @@ class Auth extends CI_Controller
 
 
 
-
-
     // ===== START LOGIN =====
 
     public function index()
     {
 
-        $this->form_validation->set_rules('email', 'Email', 'required|valid_email');
-        $this->form_validation->set_rules('password', 'Password', 'required|min_length[8]');
-
+        $this->form_validation->set_rules('email', 'Email', 'required|trim|valid_email');
+        $this->form_validation->set_rules('password', 'Password', 'required|trim|min_length[8]');
 
         if ($this->form_validation->run() == FALSE) {
 
@@ -71,20 +67,15 @@ class Auth extends CI_Controller
             // Check if the passwords match
             if (password_verify($password, $user['password'])) {
 
-
                 // check the account whether it is active or not
                 if ($user['is_active'] == 1) {
-
 
                     // Check if the user has made a payment
                     if ($user['is_payment'] == 1) {
                         // If it is already
 
                         $data = [
-
                             'email' => $user['email']
-
-
                         ];
 
                         $this->session->set_userdata($data);
@@ -134,12 +125,7 @@ class Auth extends CI_Controller
         }
     }
 
-
     // ===== END LOGIN =====
-
-
-
-
 
 
     // ===== START REGISTER =====
@@ -149,7 +135,6 @@ class Auth extends CI_Controller
 
         $this->form_validation->set_rules('name', 'Nama', 'required');
         $this->form_validation->set_rules('email', 'Email', 'required|valid_email|is_unique[users.email]', [
-
             'is_unique' => 'Email yang anda gunakan sudah terdaftar'
         ]);
         $this->form_validation->set_rules('contact', 'Kontak', 'required|min_length[12]|max_length[13]|numeric', [
@@ -210,10 +195,6 @@ class Auth extends CI_Controller
     // ===== END REGISTER =====
 
 
-
-
-
-
     // ===== START SEND EMAIL =====
 
     private function _sendEmail($token, $type)
@@ -231,8 +212,6 @@ class Auth extends CI_Controller
             'mailtype' => 'html',
             'charset' => 'utf-8',
             'newline' => "\r\n"
-
-
 
         ];
 
@@ -259,8 +238,6 @@ class Auth extends CI_Controller
     }
 
     // ===== END SEND EMAIL =====
-
-
 
 
 
