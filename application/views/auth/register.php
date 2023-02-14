@@ -12,7 +12,7 @@
   </div>
 </section>
 <!-- ====== Banner End ====== -->
-<!-- ====== Login Start ====== -->
+<!-- ====== Register Start ====== -->
 <section>
   <div class="container">
     <div class="row justify-content-center my-5">
@@ -23,21 +23,21 @@
         <form class="ud-login-form" action="<?= base_url('auth/register') ?>" method="post">
           <div class="ud-form-group">
             <label for="name" class="form-label float-start">Nama</label>
-            <input type="text" name="name" id="name" autofocus autocomplete="OFF" value="<?php echo set_value('name'); ?>" placeholder="Masukkan nama" />
+            <input type="text" name="name" id="name" autofocus autocomplete="OFF" value="<?= set_value('name'); ?>" placeholder="Masukkan nama" />
             <i class="text-danger fw-light">
             <?= form_error('name', '<small class="text-danger">', '</small>'); ?>
             </i>
           </div>
           <div class="ud-form-group">
             <label for="email" class="form-label float-start">Email</label>
-            <input type="email" name="email" id="email" autocomplete="OFF" value="<?php echo set_value('email'); ?>" placeholder="example@gmail.com" />
+            <input type="email" name="email" id="email" autocomplete="OFF" value="<?= set_value('email'); ?>" placeholder="example@gmail.com" />
             <i class="text-danger fw-light">
             <?= form_error('email', '<small class="text-danger">', '</small>'); ?>
             </i>
           </div>
           <div class="ud-form-group">
             <label for="contact" class="form-label float-start">No. Telepon</label>
-            <input type="text" name="contact" id="contact" autocomplete="OFF" value="<?php echo set_value('contact'); ?>" placeholder="081 234 679 101" />
+            <input type="text" name="contact" id="contact" autocomplete="OFF" value="<?= set_value('contact'); ?>" placeholder="081 234 679 101" />
             <i class="text-danger fw-light">
               <?= form_error('contact', '<small class="text-danger">', '</small>'); ?>
             </i>
@@ -72,4 +72,4 @@
     </div>
   </div>
 </section>
-<!-- ====== Login End ====== -->
+<!-- ====== Register End ====== -->

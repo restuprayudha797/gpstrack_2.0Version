@@ -9,8 +9,7 @@ class Logout extends CI_Controller
     {
 
         $this->session->unset_userdata('email');
-
-
+        
         // arahkan ke form login kembali
         redirect('auth');
     }

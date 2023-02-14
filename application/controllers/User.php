@@ -20,7 +20,6 @@ class User extends CI_Controller
 
                 if ($user['is_payment'] != 1) {
 
-
                     redirect('auth/payment');
                 }
             } elseif ($user['is_active'] == 2) {

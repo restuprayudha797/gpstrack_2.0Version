@@ -34,6 +34,57 @@
     <link rel="stylesheet" href="<?= base_url('assets/') ?>css/lineicons.css" />
     <link rel="stylesheet" href="<?= base_url('assets/') ?>css/ud-styles.css" />
     <link rel="stylesheet" href="<?= base_url('assets/') ?>css/my.css" />
+    <style>
+        /* .image-upload {
+            position: relative;
+            max-width: 360px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .image-upload input {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        .upload-field {
+            display: block;
+            background: #F4FAFE;
+            padding: 12px;
+            border-radius: 11px;
+
+        }
+
+        .upload-field .file-thumbnail {
+            cursor: pointer;
+            border: 1px dashed #BBD9EC;
+            border-radius: 11px;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .upload-field .file-thumbnail img {
+            width: 50%;
+        }
+
+        .upload-field .file-thumbnail h3 {
+            font-size: 12px;
+            color: #000000;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .upload-field .file-thumbnail p {
+            font-size: 12px;
+            color: #9ABCD1;
+            margin-bottom: 0;
+        } */
+    </style>
 </head>
 
 <body>

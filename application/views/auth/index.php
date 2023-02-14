@@ -25,21 +25,21 @@
         <form class="ud-login-form" action="<?= base_url('auth') ?>" method="post">
           <div class="ud-form-group">
             <label for="email" class="form-label float-start">Email</label>
-            <input type="email" autofocus autocomplete="OFF" name="email" id="email" value="<?php echo set_value('email'); ?>" placeholder="example@gmail.com" />
-            <?= form_error('email'); ?>
+            <input type="email" autofocus autocomplete="OFF" name="email" id="email" value="<?= set_value('email'); ?>" placeholder="example@gmail.com" />
+            <?= form_error('email', '<small class="text-danger">', '</small>'); ?>
 
           </div>
           <div class="ud-form-group">
             <label for="password" class="form-label float-start">Password</label>
             <input type="password" name="password" id="password" placeholder="*********" />
-            <?= form_error('password'); ?>
+            <?= form_error('password', '<small class="text-danger">', '</small>'); ?>
           </div>
           <div class="ud-form-group">
             <button type="submit" class="ud-main-btn w-100">Login</button>
           </div>
         </form>
         <div class="text-center">
-          <a class="forget-pass" href="javascript:void(0)">
+          <a class="forget-pass" href="<?= base_url('auth/forgetPass') ?>">
             Forget Password?
           </a>
           <p class="signup-option">

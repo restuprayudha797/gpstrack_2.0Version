@@ -31,7 +31,6 @@ class Auth extends CI_Controller
     // ===== END CONSTRUCT FUNCTION =====
 
 
-
     // ===== START LOGIN =====
 
     public function index()
@@ -105,11 +104,11 @@ class Auth extends CI_Controller
 
                     redirect('admin');
                 } else {
-                    $this->session->set_flashdata('auth_message', '<div class="alert alert-danger" role="alert">Akun anda belum diaktifasi, silahkan cek email dan lakukan aktifasi</div>');
+                    $this->session->set_flashdata('auth_message', '<div class="alert alert-danger text-center" role="alert">Akun anda belum diaktifasi, silahkan cek email dan lakukan aktifasi</div>');
                     redirect('auth');
                 }
             } else {
-                $this->session->set_flashdata('auth_message', '<div class="alert alert-danger" role="alert">Password yang anda masukkan tidak sesuai</div>');
+                $this->session->set_flashdata('auth_message', '<div class="alert alert-danger text-center" role="alert">Password tidak sesuai</div>');
                 redirect('auth');
             }
 
@@ -120,7 +119,7 @@ class Auth extends CI_Controller
             // notify the user the email entered does not exist
 
             // notify user
-            $this->session->set_flashdata('auth_message', '<div class="alert alert-danger" role="alert"> Akun email yang anda masukkan tidak ditemukan</div>');
+            $this->session->set_flashdata('auth_message', '<div class="alert alert-danger text-center" role="alert">Email tidak terdaftar</div>');
             redirect('auth');
         }
     }
@@ -240,8 +239,6 @@ class Auth extends CI_Controller
     // ===== END SEND EMAIL =====
 
 
-
-
     // ===== START VERIFY EMAIL ACCOUNT =====
 
     public function verify()
@@ -298,29 +295,34 @@ class Auth extends CI_Controller
 
     public function payment()
     {
+        // if (!$this->session->userdata('email')) {
+        //     redirect('auth');
+        // } else {
+        //     $user = $this->db->get_where('users', ['email' => $this->session->userdata('email')])->row_array();
+        //     if ($user['is_payment'] == 1) {
+        //         redirect('auth');
+        //     } else {
 
-        if (!$this->session->userdata('email')) {
+        //         echo 1;
 
-            redirect('auth');
-        } else {
+        //     }
+        // }
+        $data['title'] = "Payment";
 
-            $user = $this->db->get_where('users', ['email' => $this->session->userdata('email')])->row_array();
-
-            if ($user['is_payment'] == 1) {
-                redirect('auth');
-            } else {
-
-                echo 1;
-            }
-        }
+        $this->load->view('layout/header', $data);
+        $this->load->view('layout/navbar', $data);
+        $this->load->view('auth/payment', $data);
+        $this->load->view('layout/footer');
     }
     // ===== END PAYMENT =====
 
+    public function forgetPass()
+    {
+        $data['title'] = "Forget";
 
-
-
-
-
-
-
+        $this->load->view('layout/header', $data);
+        $this->load->view('layout/navbar', $data);
+        $this->load->view('auth/forget-pass', $data);
+        $this->load->view('layout/footer');
+    }
 }

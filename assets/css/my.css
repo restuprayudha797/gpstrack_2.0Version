@@ -7,30 +7,79 @@
 	--white: #ffffff;
 }
 
-.my-hero-image{
-  display: flex;
-  position: relative;
-  /* background-color: white; */
-  height: 250px;
-  padding: 10px;
-  box-sizing: border-box;
+.my-hero-image {
+	display: flex;
+	position: relative;
+	/* background-color: white; */
+	height: 250px;
+	padding: 10px;
+	box-sizing: border-box;
 }
 
 .circle {
 	width: 100px;
 	height: 100px;
-  border-radius: 50%;
-  display: inline-flex;
+	border-radius: 50%;
+	display: inline-flex;
 	background-color: var(--white);
-  opacity: 1;
+	opacity: 1;
 }
 
-.circle-2{
-  width: 250px;
-  height: 250px;
-  background-color: #82aefd;
-  position: absolute;
-  left: 40%;
+.circle-2 {
+	width: 250px;
+	height: 250px;
+	background-color: #82aefd;
+	position: absolute;
+	left: 40%;
 }
 
+/* drag and drop image ========================== */
 
+.image-upload {
+	position: relative;
+	max-width: 360px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.image-upload input {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	opacity: 0;
+	cursor: pointer;
+}
+
+.upload-field {
+	display: block;
+	background: #f4fafe;
+	padding: 12px;
+	border-radius: 11px;
+}
+
+.upload-field .file-thumbnail {
+	cursor: pointer;
+	border: 1px dashed #bbd9ec;
+	border-radius: 11px;
+	text-align: center;
+	padding: 20px;
+}
+
+.upload-field .file-thumbnail img {
+	width: 50%;
+}
+
+.upload-field .file-thumbnail h3 {
+	font-size: 12px;
+	color: #000000;
+	font-weight: 600;
+	margin-bottom: 4px;
+}
+
+.upload-field .file-thumbnail p {
+	font-size: 12px;
+	color: #9abcd1;
+	margin-bottom: 0;
+}

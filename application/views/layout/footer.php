@@ -1,18 +1,12 @@
   <!-- ====== Footer Start ====== -->
   <footer class="ud-footer wow fadeInUp" data-wow-delay=".15s">
-    <div class="shape shape-2">
-      <img src="<?= base_url('assets/') ?>images/footer/shape-2.svg" alt="shape" />
-    </div>
-    <div class="shape shape-3">
-      <img src="<?= base_url('assets/') ?>images/footer/shape-3.svg" alt="shape" class="opacity-50" />
-    </div>
     <div class="ud-footer-widgets">
       <div class="container">
         <div class="row">
           <div class="col-xl-3 col-lg-4 col-md-6">
             <div class="ud-widget">
               <a href="index.html" class="ud-footer-logo">
-                <img class="py-3" src="<?= base_url('assets/img/logo-dark.webp') ?>" alt="Logo" />
+                <img class="pb-3" src="<?= base_url('assets/img/logo-dark.webp') ?>" alt="Logo" />
               </a>
               <p class="ud-widget-desc">
                 We create digital experiences for brands and companies by
@@ -222,6 +216,25 @@
     }
 
     window.document.addEventListener("scroll", onScroll);
+  </script>
+
+  <!-- DragNDrop Image -->
+  <script>
+    function fileValue(value) {
+      var path = value.value;
+      var extenstion = path.split('.').pop();
+      if (extenstion == "jpg" || extenstion == "pdf" || extenstion == "doc" || extenstion == "docx") {
+        document.getElementById('image-preview').src = window.URL.createObjectURL(value.files[0]);
+        var filename = path.replace(/^.*[\\\/]/, '').split('.').slice(0, -1).join('.');
+        document.getElementById("filename").innerHTML = filename;
+      } else {
+        alert("File not supported. Kindly Upload the Image of below given extension ")
+      }
+    }
+
+    function removeUpload() {
+      $('#preview').hide();
+    }
   </script>
   </body>
 
