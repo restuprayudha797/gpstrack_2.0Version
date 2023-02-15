@@ -11,15 +11,11 @@ class User extends CI_Controller
         parent::__construct();
 
         if ($this->session->userdata('email')) {
-
             $user = $this->db->get_where('users', ['email' => $this->session->userdata('email')])->row_array();
-
-
 
             if ($user['is_active'] == 1) {
 
                 if ($user['is_payment'] != 1) {
-
                     redirect('auth/payment');
                 }
             } elseif ($user['is_active'] == 2) {
@@ -36,6 +32,11 @@ class User extends CI_Controller
 
     public function index()
     {
-        echo 1;
+        // $data['title'] = "Application";
+
+        // $this->load->view('layout/header', $data);
+        // $this->load->view('layout/navbar', $data);
+        // $this->load->view('user/index', $data);
+        // $this->load->view('layout/footer');
     }
 }
