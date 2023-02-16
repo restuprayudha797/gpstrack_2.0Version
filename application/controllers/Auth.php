@@ -25,6 +25,7 @@ class Auth extends CI_Controller
             } else {
                 $this->session->set_flashdata('auth_message', '<div class="alert alert-danger" role="alert">Akun anda belum diaktifasi, silahkan cek email dan lakukan aktifasi</div>');
             }
+            $this->load->view();
         }
     }
 
@@ -223,7 +224,7 @@ class Auth extends CI_Controller
 
         if ($type == 'verify') {
 
-            $this->email->message('klik link ini untuk mengaktifkan akun anda : <a href="' . base_url() . 'auth/verify?email=' . $email .  '&token=' . $token . '">Aktifkan</a>');
+            $this->email->message('klik link ini untuk mengaktifkan akun anda : <a href="' . base_url() . 'auth/verify?email=' . $email . '&token=' . $token . '">Aktifkan</a>');
         }
 
 
@@ -295,24 +296,22 @@ class Auth extends CI_Controller
 
     public function payment()
     {
-        // if (!$this->session->userdata('email')) {
-        //     redirect('auth');
-        // } else {
-        //     $user = $this->db->get_where('users', ['email' => $this->session->userdata('email')])->row_array();
-        //     if ($user['is_payment'] == 1) {
-        //         redirect('auth');
-        //     } else {
+        if (!$this->session->userdata('email')) {
+            redirect('auth');
+        } else {
+            $user = $this->db->get_where('users', ['email' => $this->session->userdata('email')])->row_array();
+            if ($user['is_payment'] == 1) {
+                redirect('auth');
+            } else {
 
-        //         echo 1;
+                $data['title'] = "Payment";
 
-        //     }
-        // }
-        $data['title'] = "Payment";
-
-        $this->load->view('layout/header', $data);
-        $this->load->view('layout/navbar', $data);
-        $this->load->view('auth/payment', $data);
-        $this->load->view('layout/footer');
+                $this->load->view('layout/header', $data);
+                $this->load->view('layout/navbar', $data);
+                $this->load->view('auth/payment', $data);
+                $this->load->view('layout/footer');
+            }
+        }
     }
     // ===== END PAYMENT =====
 
