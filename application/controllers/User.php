@@ -26,17 +26,17 @@ class User extends CI_Controller
                 redirect('auth');
             }
         } else {
-            redirect('auth');
+            // redirect('auth');
         }
     }
 
     public function index()
     {
-        // $data['title'] = "Application";
+        $data['title'] = "Application";
 
-        // $this->load->view('layout/header', $data);
-        // $this->load->view('layout/navbar', $data);
-        // $this->load->view('user/index', $data);
-        // $this->load->view('layout/footer');
+        $this->load->view('dashboard/sidebar', $data);
+        $this->load->view('dashboard/navbar', $data);
+        $this->load->view('user/index', $data);
+        $this->load->view('dashboard/footer');
     }
 }
