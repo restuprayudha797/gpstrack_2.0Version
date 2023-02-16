@@ -40,7 +40,7 @@
               </label>
               <div class="text-center">
                 <button onclick="removeUpload()" class="btn btn-danger">Hapus</button>
-                <button onclick="removeUpload()" class="btn btn-primary">Upload</button>
+                <button type="submit" class="btn btn-primary">Upload</button>
               </div>
             </div>
 

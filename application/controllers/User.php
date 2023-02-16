@@ -32,11 +32,31 @@ class User extends CI_Controller
 
     public function index()
     {
-        $data['title'] = "Application";
+        $data['title'] = "Dashboard";
 
         $this->load->view('dashboard/sidebar', $data);
         $this->load->view('dashboard/navbar', $data);
         $this->load->view('user/index', $data);
+        $this->load->view('dashboard/footer');
+    }
+
+    public function tracker()
+    {
+        $data['title'] = "Tracker";
+
+        $this->load->view('dashboard/sidebar', $data);
+        $this->load->view('dashboard/navbar', $data);
+        $this->load->view('user/tracker', $data);
+        $this->load->view('dashboard/footer');
+    }
+
+    public function power()
+    {
+        $data['title'] = "Power";
+
+        $this->load->view('dashboard/sidebar', $data);
+        $this->load->view('dashboard/navbar', $data);
+        $this->load->view('user/power', $data);
         $this->load->view('dashboard/footer');
     }
 }
