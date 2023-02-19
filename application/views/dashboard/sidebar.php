@@ -218,7 +218,7 @@
         </span>
 
         <li class="nav-item">
-          <a href="notification.html">
+          <a href="<?= base_url('logout') ?>">
             <span class="icon">
               <i class="lni lni-exit fw-bold text-danger"></i>
             </span>

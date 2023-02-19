@@ -25,7 +25,6 @@ class Auth extends CI_Controller
             } else {
                 $this->session->set_flashdata('auth_message', '<div class="alert alert-danger" role="alert">Akun anda belum diaktifasi, silahkan cek email dan lakukan aktifasi</div>');
             }
-            $this->load->view();
         }
     }
 
@@ -304,6 +303,8 @@ class Auth extends CI_Controller
                 redirect('auth');
             } else {
 
+
+
                 $data['title'] = "Payment";
 
                 $this->load->view('layout/header', $data);
@@ -314,6 +315,65 @@ class Auth extends CI_Controller
         }
     }
     // ===== END PAYMENT =====
+
+
+    // ===== Start Pay ======
+
+    public function pay()
+    {
+        $user = $this->db->get_where('users', ['email' => $this->session->userdata('email')])->row_array();
+
+
+        // Cek apakah user ada mengupload gambar
+        $upload_bukti =   $_FILES['bukti']['name'];
+
+        $bukti = 'kosong';
+
+        if ($upload_bukti) {
+
+            $config['allowed_types'] = 'gif|jpg|png|jpeg';
+            $config['max_size']     = '2024';
+            $config['upload_path'] = './assets/images/bukti';
+
+            $this->load->library('upload', $config);
+
+            if ($this->upload->do_upload('bukti')) {
+
+                $bukti = $this->upload->data('file_name');
+            } else {
+
+                echo $this->upload->display_errors();
+            }
+        }
+
+        // akhir dari pengecekan gambar
+
+        if ($bukti == 'kosong') {
+
+            $this->session->set_flashdata('auth_message', '<div class="alert alert-danger" role="alert"> Pastikan yang anda upload adalah gambar dan type : gif/jpg/png/jpeg  </div>');
+            redirect('auth/payment');
+        } else {
+            $data = [
+                'package' => $bukti,
+                'email' => $user['email'],
+                'purchase_date' => time()
+            ];
+
+            $this->db->insert('payment', $data);
+
+
+
+            redirect('auth/payment');
+        }
+    }
+
+
+
+
+    // ===== End Pay ======
+
+
+
 
     public function forgetPass()
     {
