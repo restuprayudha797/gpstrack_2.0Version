@@ -68,6 +68,13 @@ class User extends CI_Controller
 
     public function power()
     {
+        $email = $this->session->userdata('email');
+
+        $data['active_check'] = $this->db->get_where('payment', ['email' => $email])->row_array();
+        $data['users'] = $this->db->get_where('users', ['email' => $email])->row_array();
+
+        $data['waktuSekarang'] = time();
+
         $data['title'] = "Power";
 
 
