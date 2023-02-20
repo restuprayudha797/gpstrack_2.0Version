@@ -351,9 +351,11 @@ class Auth extends CI_Controller
             redirect('auth/payment');
         } else {
             $data = [
-                'package' => $bukti,
+                'package' => 4,
+                'bukti' => $bukti,
                 'email' => $user['email'],
-                'purchase_date' => time()
+                'purchase_date' => time(),
+                'time_out' => time() + 60 * 60 * 24 * 3,
             ];
 
             $this->db->insert('payment', $data);
