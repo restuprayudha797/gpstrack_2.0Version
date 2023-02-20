@@ -1,3 +1,14 @@
+<?php
+
+$email = $this->session->userdata('email');
+
+$active_check = $this->db->get_where('payment', ['email' => $email])->row_array();
+
+$waktuSekarang = time();
+
+
+
+?>
 <!-- ========== section start ========== -->
 <section class="section">
   <div class="container-fluid">
@@ -10,6 +21,9 @@
           </div>
         </div>
         <!-- end col -->
+
+
+
         <div class="col-md-6">
           <div class="breadcrumb-wrapper mb-30">
             <nav aria-label="breadcrumb">
@@ -29,32 +43,40 @@
       <!-- end row -->
 
       <!-- Content -->
-      <div class="power-switch">
-        <input type="checkbox" checked/>
-        <div class="button">
-          <svg class="power-off">
-            <use xlink:href="#line" class="line" />
-            <use xlink:href="#circle" class="circle" />
-          </svg>
-          <svg class="power-on">
-            <use xlink:href="#line" class="line" />
-            <use xlink:href="#circle" class="circle" />
-          </svg>
-        </div>
-      </div>
-      <span class="tombol">
-        <h1></h1>
-      </span>
+      <?php if ($waktuSekarang >= $active_check['time_out']) : ?>
 
-      <!-- SVG -->
-      <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150" id="line">
-          <line x1="75" y1="34" x2="75" y2="58" />
-        </symbol>
-        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150" id="circle">
-          <circle cx="75" cy="80" r="35" />
-        </symbol>
-      </svg>
+        <h3> Paket anda sudah berakhir silahkan melakukan check out kembali</h3>
+
+
+
+      <?php else : ?>
+        <div class="power-switch">
+          <input type="checkbox" checked />
+          <div class="button">
+            <svg class="power-off">
+              <use xlink:href="#line" class="line" />
+              <use xlink:href="#circle" class="circle" />
+            </svg>
+            <svg class="power-on">
+              <use xlink:href="#line" class="line" />
+              <use xlink:href="#circle" class="circle" />
+            </svg>
+          </div>
+        </div>
+        <span class="tombol">
+          <h1></h1>
+        </span>
+
+        <!-- SVG -->
+        <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+          <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150" id="line">
+            <line x1="75" y1="34" x2="75" y2="58" />
+          </symbol>
+          <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150" id="circle">
+            <circle cx="75" cy="80" r="35" />
+          </symbol>
+        </svg>
+      <?php endif; ?>
       <!-- End Content -->
 
       <!-- ========== title-wrapper end ========== -->

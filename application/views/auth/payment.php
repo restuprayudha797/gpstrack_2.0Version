@@ -40,38 +40,39 @@ $checkPayment = $this->db->get_where('payment', ['email' => $this->session->user
 
           <?= form_open_multipart('auth/pay'); ?>
           <!-- Tombol Upload Tidak dapat di tekan -->
-          <!-- <div class="">
-          <p>- Mandiri : 1080023334981 Zidan Rafif Pratama</p>
-          <p>- BSI : 7205987007 Zidan Rafif Pratama</p>
-          <p>- BRI : 107901012900539 Zidan Rafif Pratama</p>
-        </div>
-        <div class="ud-form-group mt-3">
-          <div class="image-upload">
-            <input type="file" name="gambar" id="logo" onchange="fileValue(this)">
-            <label for="logo" class="upload-field" id="file-label">
-              <div class="file-thumbnail">
-                <img id="image-preview" src="https://www.btklsby.go.id/images/placeholder/basic.png" alt="Empty Image">
-                <h3 id="filename" class="my-2">
-                  Drag and Drop
-                </h3>
-                <p>Supports JPG, DOC, DOCX, PDF</p>
-              </div>
-            </label>
-            <div class="text-center mt-5">
+          <div class="">
+            <p>- Mandiri : 1080023334981 Zidan Rafif Pratama</p>
+            <p>- BSI : 7205987007 Zidan Rafif Pratama</p>
+            <p>- BRI : 107901012900539 Zidan Rafif Pratama</p>
+          </div>
+          <div class="ud-form-group mt-3">
+            <div class="image-upload">
+              <input type="file" name="bukti" id="logo" onchange="fileValue(this)">
+              <label for="logo" class="upload-field" id="file-label">
+                <div class="file-thumbnail">
+                  <img id="image-preview" src="https://www.btklsby.go.id/images/placeholder/basic.png" alt="Empty Image">
+                  <h3 id="filename" class="my-2">
+                    Drag and Drop
+                  </h3>
+                  <p>Supports JPG, DOC, DOCX, PDF</p>
+                </div>
+              </label>
+
+            </div>
+            <div class="text-center mt-3">
               <button type="submit" class="btn btn-primary">Upload</button>
             </div>
-          </div> -->
 
-          <input type="file" required name="bukti">
-          <button type="submit">Kirim</button>
+            <!-- <input type="file" required name="bukti">
+          <button type="submit">Kirim</button> -->
+            </form>
+
+          <?php endif; ?>
+          </div>
+
           </form>
-
-        <?php endif; ?>
       </div>
-
-      </form>
     </div>
-  </div>
   </div>
 </section>
 <!-- ====== Payment End ====== -->

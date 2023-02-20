@@ -1,3 +1,15 @@
+<?php
+
+$email = $this->session->userdata('email');
+
+$active_check = $this->db->get_where('payment', ['email' => $email])->row_array();
+
+$waktuSekarang = time();
+
+
+
+?>
+
 <!-- ========== section start ========== -->
 <section class="section">
   <div class="container-fluid">
@@ -29,7 +41,20 @@
       <!-- end row -->
 
       <!-- Content -->
-      ....
+      <?php if ($waktuSekarang >= $active_check['time_out']) : ?>
+
+        <h3> Paket anda sudah berakhir silahkan melakukan check out kembali</h3>
+
+
+
+      <?php else : ?>
+
+        <h3>Berakhir Hingga : <?= date('d - F - Y', $active_check['time_out']) ?></h3>
+
+
+      <?php endif; ?>
+
+
       <!-- End Content -->
     </div>
     <!-- ========== title-wrapper end ========== -->

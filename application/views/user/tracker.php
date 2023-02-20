@@ -1,3 +1,14 @@
+<?php
+
+$email = $this->session->userdata('email');
+
+$active_check = $this->db->get_where('payment', ['email' => $email])->row_array();
+
+$waktuSekarang = time();
+
+
+
+?>
 <!-- ========== section start ========== -->
 <section class="section">
   <div class="container-fluid">
@@ -29,9 +40,23 @@
       <!-- end row -->
 
       <!-- Content -->
-      <div style="width: 100%">
-        <iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=1%20Grafton%20Street,%20Dublin,%20Ireland+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.maps.ie/distance-area-calculator.html">area maps</a></iframe>
-      </div>
+
+      <?php if ($waktuSekarang >= $active_check['time_out']) : ?>
+
+        <h3> Paket anda sudah berakhir silahkan melakukan check out kembali</h3>
+
+
+
+      <?php else : ?>
+
+        <div style="width: 100%">
+          <iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=1%20Grafton%20Street,%20Dublin,%20Ireland+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.maps.ie/distance-area-calculator.html">area maps</a></iframe>
+        </div>
+
+
+      <?php endif; ?>
+
+
       <!-- End Content -->
 
     </div>
