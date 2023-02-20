@@ -32,8 +32,6 @@ $checkPayment = $this->db->get_where('payment', ['email' => $this->session->user
 
         <?php if ($checkPayment) : ?>
 
-
-
           <h1>Halaman Tunggu Konfirmasi admin</h1>
 
         <?php else : ?>

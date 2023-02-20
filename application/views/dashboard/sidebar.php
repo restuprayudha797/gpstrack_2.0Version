@@ -135,6 +135,18 @@
       transition: transform 0.4s ease 0.2s, stroke-dashoffset 0.4s ease 0.2s;
     }
 
+    .power-switch .tombol h1::before {
+      content: "OFF";
+    }
+
+    .power-switch input:checked+.button+.tombol h1::before {
+      content: "";
+    }
+
+    .power-switch input:checked+.button+.tombol h1::after {
+      content: "ON";
+    }
+
     @keyframes line-animation {
       0% {
         transform: translateY(0);
@@ -174,6 +186,7 @@
         transform: scale(1);
       }
     }
+
   </style>
 </head>
 

@@ -29,22 +29,24 @@
       <!-- end row -->
 
       <!-- Content -->
-      <div class="power-switch">
-        <input type="checkbox" checked/>
-        <div class="button">
-          <svg class="power-off">
-            <use xlink:href="#line" class="line" />
-            <use xlink:href="#circle" class="circle" />
-          </svg>
-          <svg class="power-on">
-            <use xlink:href="#line" class="line" />
-            <use xlink:href="#circle" class="circle" />
-          </svg>
+      <div class="container">
+        <div class="power-switch mx-auto mt-4 d-block">
+          <input type="checkbox" />
+          <div class="button">
+            <svg class="power-off">
+              <use xlink:href="#line" class="line" />
+              <use xlink:href="#circle" class="circle" />
+            </svg>
+            <svg class="power-on">
+              <use xlink:href="#line" class="line" />
+              <use xlink:href="#circle" class="circle" />
+            </svg>
+          </div>
+          <div class="tombol text-center">
+            <h1></h1>
+          </div>
         </div>
       </div>
-      <span class="tombol">
-        <h1></h1>
-      </span>
 
       <!-- SVG -->
       <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">

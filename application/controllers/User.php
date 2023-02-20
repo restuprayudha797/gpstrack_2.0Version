@@ -27,7 +27,7 @@ class User extends CI_Controller
                 redirect('auth');
             }
         } else {
-            redirect('auth');
+            // redirect('auth');
         }
     }
 

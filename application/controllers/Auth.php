@@ -302,9 +302,6 @@ class Auth extends CI_Controller
             if ($user['is_payment'] == 1) {
                 redirect('auth');
             } else {
-
-
-
                 $data['title'] = "Payment";
 
                 $this->load->view('layout/header', $data);
@@ -361,8 +358,6 @@ class Auth extends CI_Controller
 
             $this->db->insert('payment', $data);
 
-
-
             redirect('auth/payment');
         }
     }
@@ -371,8 +366,6 @@ class Auth extends CI_Controller
 
 
     // ===== End Pay ======
-
-
 
 
     public function forgetPass()
