@@ -45,6 +45,21 @@ class User extends CI_Controller
     {
         $data['title'] = "Tracker";
 
+        // Separate the @ character in the email
+        $preliminaryData = $this->session->userdata('email');
+
+        // the results of splitting values ​​on email
+        $emailValue = explode("@", $preliminaryData);
+
+
+        // select data by user
+
+        $data['koordinat'] = $this->db->get('tb_marker_' . $emailValue[0])->result_array();
+
+
+
+
+
         $this->load->view('dashboard/sidebar', $data);
         $this->load->view('dashboard/navbar', $data);
         $this->load->view('user/tracker', $data);
@@ -54,6 +69,8 @@ class User extends CI_Controller
     public function power()
     {
         $data['title'] = "Power";
+
+
 
         $this->load->view('dashboard/sidebar', $data);
         $this->load->view('dashboard/navbar', $data);
