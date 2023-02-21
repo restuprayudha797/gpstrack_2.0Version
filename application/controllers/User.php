@@ -27,13 +27,16 @@ class User extends CI_Controller
                 redirect('auth');
             }
         } else {
-            // redirect('auth');
+            redirect('auth');
         }
     }
 
     public function index()
     {
         $data['title'] = "Dashboard";
+        //get table users
+        $email = $this->session->userdata('email');
+        $data['users'] = $this->db->get_where('users', ['email' => $email])->row_array();
 
         $this->load->view('dashboard/sidebar', $data);
         $this->load->view('dashboard/navbar', $data);
@@ -44,6 +47,9 @@ class User extends CI_Controller
     public function tracker()
     {
         $data['title'] = "Tracker";
+        //get table users
+        $email = $this->session->userdata('email');
+        $data['users'] = $this->db->get_where('users', ['email' => $email])->row_array();
 
         // Separate the @ character in the email
         $preliminaryData = $this->session->userdata('email');
@@ -57,9 +63,6 @@ class User extends CI_Controller
         $data['koordinat'] = $this->db->get('tb_marker_' . $emailValue[0])->result_array();
 
 
-
-
-
         $this->load->view('dashboard/sidebar', $data);
         $this->load->view('dashboard/navbar', $data);
         $this->load->view('user/tracker', $data);
@@ -68,20 +71,34 @@ class User extends CI_Controller
 
     public function power()
     {
+        $data['title'] = "Power";
+        //get table users
         $email = $this->session->userdata('email');
-
-        $data['active_check'] = $this->db->get_where('payment', ['email' => $email])->row_array();
         $data['users'] = $this->db->get_where('users', ['email' => $email])->row_array();
 
+        //check time out
+        $data['active_check'] = $this->db->get_where('payment', ['email' => $email])->row_array();
         $data['waktuSekarang'] = time();
-
-        $data['title'] = "Power";
-
-
 
         $this->load->view('dashboard/sidebar', $data);
         $this->load->view('dashboard/navbar', $data);
         $this->load->view('user/power', $data);
         $this->load->view('dashboard/footer');
+    }
+
+    public function powerOn()
+    {
+        $this->db->where('state', 1);
+        $this->db->insert('ledstatus_muhammadrestuprayudha797');
+
+        redirect('home/power');
+    }
+
+    public function powerOff()
+    {
+        $this->db->set('state', 0);
+        $this->db->update('ledstatus_muhammadrestuprayudha797');
+
+        redirect('home/power');
     }
 }

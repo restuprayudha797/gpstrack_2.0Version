@@ -42,7 +42,25 @@
 <script src="<?= base_url('assets-admin/') ?>js/world-merc.js"></script>
 <script src="<?= base_url('assets-admin/') ?>js/polyfill.js"></script>
 <script src="<?= base_url('assets-admin/') ?>js/main.js"></script>
+<!-- Jquery -->
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 
+<script>
+  $('#power-switch').on('click', function() {
+    const power = $(this).data('power');
+
+    $.ajax({
+      url: "<?= base_url('user/powerOn'); ?>",
+      type: 'post',
+      data: {
+        power: power
+      },
+      success: function() {
+        document.location.href = "<?= base_url('user/power'); ?>";
+      }
+    });
+  });
+</script>
 <script>
   // ======== jvectormap activation
   var markers = [{

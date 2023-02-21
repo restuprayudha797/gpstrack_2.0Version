@@ -10,9 +10,6 @@
           </div>
         </div>
         <!-- end col -->
-
-
-
         <div class="col-md-6">
           <div class="breadcrumb-wrapper mb-30">
             <nav aria-label="breadcrumb">
@@ -39,8 +36,8 @@
 
       <?php else : ?>
         <div class="container">
-          <div class="power-switch mx-auto mt-4 d-block">
-            <input type="checkbox" />
+          <div class="pwer-switch mx-auto mt-4 d-block">
+            <input id="power-switch" type="checkbox" data-state="1" autofocus/>
             <div class="button">
               <svg class="power-off">
                 <use xlink:href="#line" class="line" />
