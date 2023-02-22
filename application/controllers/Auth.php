@@ -302,7 +302,7 @@ class Auth extends CI_Controller
             if ($user['is_payment'] == 1) {
                 redirect('auth');
             } else {
-                $data['title'] = "Payment";
+                $data['title'] = "Pembayaran";
 
                 $this->load->view('layout/header', $data);
                 $this->load->view('layout/navbar', $data);
@@ -328,7 +328,7 @@ class Auth extends CI_Controller
 
         if ($upload_bukti) {
 
-            $config['allowed_types'] = 'gif|jpg|png|jpeg';
+            $config['allowed_types'] = 'jpg|png|jpeg|pdf|doc|docx';
             $config['max_size']     = '2024';
             $config['upload_path'] = './assets/images/bukti';
 
@@ -347,7 +347,9 @@ class Auth extends CI_Controller
 
         if ($bukti == 'kosong') {
 
-            $this->session->set_flashdata('auth_message', '<div class="alert alert-danger" role="alert"> Pastikan yang anda upload adalah gambar dan type : gif/jpg/png/jpeg  </div>');
+            $this->session->set_flashdata('auth_message', '<div class="alert alert-danger" role="alert">
+            <p>Pastikan yang anda upload adalah gambar dan type :</p>
+            <p>(.jpg | .jpeg | .png | .pdf | .doc | . docx)</p> </div>');
             redirect('auth/payment');
         } else {
             $data = [
