@@ -35,7 +35,6 @@ class Admin extends CI_Controller
         // Disini untuk dasboard admin ya yas
         // iya yud
 
-        $data = "Admin";
         //get table users
         // $email = $this->session->userdata('email');
         // $data['user'] = $this->db->get_where('users', ['email' => $email])->row_array();
