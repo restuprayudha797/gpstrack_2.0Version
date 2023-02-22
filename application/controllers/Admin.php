@@ -36,12 +36,52 @@ class Admin extends CI_Controller
         // iya yud
 
         //get table users
-        // $email = $this->session->userdata('email');
-        // $data['user'] = $this->db->get_where('users', ['email' => $email])->row_array();
+        $data['title'] = "User Data";
+        $email = $this->session->userdata('email');
+        $data['user'] = $this->db->get_where('users', ['email' => $email])->row_array();
 
         $this->load->view('dashboard/sidebar', $data);
         $this->load->view('dashboard/navbar', $data);
         $this->load->view('admin/index', $data);
+        $this->load->view('dashboard/footer');
+    }
+
+    public function payment()
+    {
+        //get table users
+        $data['title'] = "Pembayaran";
+        $email = $this->session->userdata('email');
+        $data['user'] = $this->db->get_where('users', ['email' => $email])->row_array();
+
+        $this->load->view('dashboard/sidebar', $data);
+        $this->load->view('dashboard/navbar', $data);
+        $this->load->view('admin/payment', $data);
+        $this->load->view('dashboard/footer');
+    }
+
+    public function serialNumber()
+    {
+        //get table users
+        $data['title'] = "Serial Number";
+        $email = $this->session->userdata('email');
+        $data['user'] = $this->db->get_where('users', ['email' => $email])->row_array();
+
+        $this->load->view('dashboard/sidebar', $data);
+        $this->load->view('dashboard/navbar', $data);
+        $this->load->view('admin/serialNumber', $data);
+        $this->load->view('dashboard/footer');
+    }
+
+    public function report()
+    {
+        //get table users
+        $data['title'] = "Laporan";
+        $email = $this->session->userdata('email');
+        $data['user'] = $this->db->get_where('users', ['email' => $email])->row_array();
+
+        $this->load->view('dashboard/sidebar', $data);
+        $this->load->view('dashboard/navbar', $data);
+        $this->load->view('admin/laporan', $data);
         $this->load->view('dashboard/footer');
     }
 }
