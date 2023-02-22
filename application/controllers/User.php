@@ -20,7 +20,6 @@ class User extends CI_Controller
                 } else {
                 }
             } elseif ($user['is_active'] == 2) {
-
                 redirect('admin');
             } else {
                 $this->session->set_flashdata('auth_message', '<div class="alert alert-danger" role="alert">Akun anda belum diaktifasi, silahkan cek email dan lakukan aktifasi</div>');
