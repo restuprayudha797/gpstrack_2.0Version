@@ -75,10 +75,6 @@ class Admin extends CI_Controller
         $userActive = $this->db->get_where('user_active', ['email' => $payment['email']])->row_array();
 
 
-
-
-     
-
         if ($userActive) {
 
             if ($payment['package'] == 1) {
@@ -98,6 +94,9 @@ class Admin extends CI_Controller
                 'time_out' => $time
 
             ];
+
+            $message = 'Akun anda telah di aktifasi silahkan login, dan Terimakasih telah percaya untuk menggunakan layanan kami';
+
 
             $this->db->where('email', $payment['email']);
             $this->db->update('payment', $data);
@@ -125,10 +124,6 @@ class Admin extends CI_Controller
             $this->db->update('users', $data);
 
             // end update is_active user
-
-
-
-
 
             
                             // Separate the @ character in the email
@@ -184,7 +179,7 @@ class Admin extends CI_Controller
                             'color' => [
                                     'type' => 'VARCHAR',
                                     'constraint' => '20'
-                                  
+                            
                             ],
                             'state' => [
                                     'type' =>'INT',
@@ -220,6 +215,9 @@ class Admin extends CI_Controller
             
                     // end add table power
 
+
+             
+
         }
 
         $data = [
@@ -229,11 +227,52 @@ class Admin extends CI_Controller
         $this->db->where('id_payment', $id);
         $this->db->update('payment', $data);
 
+               // send email aktif
+                $message = 'Akun anda telah di aktifasi silahkan login, dan Terimakasih telah percaya untuk menggunakan layanan kami';
+               // end send email aktif
+
+
         redirect('admin/payment');
     }
-
-
     // end Konfirmasi Action
+
+        // ===== START SEND EMAIL =====
+
+        private function _sendEmail($message, $email)
+        {
+    
+            $config = [
+    
+                'protocol' => 'smtp',
+                'smtp_host' => 'ssl://mail.gpstracklimbungan.site',
+                'smtp_user' => 'gpstracker@gpstracklimbungan.site',
+                'smtp_pass' => '^*}-OczG9Tu1',
+                'smtp_port' => 465,
+                'mailtype' => 'html',
+                'charset' => 'utf-8',
+                'newline' => "\r\n"
+    
+            ];
+    
+            $this->load->library('email', $config);
+    
+            $this->email->from('gpstracker@gpstracklimbungan.site', 'Gpstracklimbungan');
+            $this->email->to($email);
+            $this->email->subject('Akun verifikasi');
+    
+            if ($type == 'verify') {
+    
+                $this->email->message($message);
+            }
+    
+            if ($this->email->send()) {
+                return true;
+            } else {
+                echo $this->email->print_debugger();
+            }
+        }
+    
+        // ===== END SEND EMAIL =====
 
 
 
