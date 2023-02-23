@@ -300,7 +300,7 @@ class Admin extends CI_Controller
 
         $this->load->view('dashboard/sidebar', $data);
         $this->load->view('dashboard/navbar', $data);
-        $this->load->view('admin/laporan', $data);
+        $this->load->view('admin/report', $data);
         $this->load->view('dashboard/footer');
     }
 }
