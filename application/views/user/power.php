@@ -1,3 +1,18 @@
+<?php
+
+$email = $this->session->userdata('email');
+
+$active_check = $this->db->get_where('user_active', ['email' => $email])->row_array();
+
+
+$waktuSekarang = time();
+
+
+
+
+
+
+?>
 <!-- ========== section start ========== -->
 <section class="section">
   <div class="container-fluid">

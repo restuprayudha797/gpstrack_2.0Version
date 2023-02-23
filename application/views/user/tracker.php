@@ -2,7 +2,8 @@
 
 $email = $this->session->userdata('email');
 
-$active_check = $this->db->get_where('payment', ['email' => $email])->row_array();
+$active_check = $this->db->get_where('user_active', ['email' => $email])->row_array();
+
 
 $waktuSekarang = time();
 
@@ -11,6 +12,7 @@ foreach ($koordinat as $location) {
 
   $lat = $location['lat'];
   $lng = $location['lng'];
+  $waktu = $location['datetime'];
 }
 
 
@@ -25,7 +27,7 @@ foreach ($koordinat as $location) {
       <div class="row align-items-center">
         <div class="col-md-6">
           <div class="title mb-30">
-            <h2><?= $title; ?></h2>
+            <h2><?= $title; ?>/Terakhir dilihat: <?= $waktu ?></h2>
           </div>
         </div>
         <!-- end col -->

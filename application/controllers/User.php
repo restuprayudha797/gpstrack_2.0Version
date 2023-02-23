@@ -35,7 +35,7 @@ class User extends CI_Controller
         $data['title'] = "Dashboard";
         //get table users
         $email = $this->session->userdata('email');
-        $data['users'] = $this->db->get_where('users', ['email' => $email])->row_array();
+        $data['user'] = $this->db->get_where('users', ['email' => $email])->row_array();
 
         $this->load->view('dashboard/sidebar', $data);
         $this->load->view('dashboard/navbar', $data);
@@ -48,7 +48,7 @@ class User extends CI_Controller
         $data['title'] = "Tracker";
         //get table users
         $email = $this->session->userdata('email');
-        $data['users'] = $this->db->get_where('users', ['email' => $email])->row_array();
+        $data['user'] = $this->db->get_where('users', ['email' => $email])->row_array();
 
         // Separate the @ character in the email
         $preliminaryData = $this->session->userdata('email');
@@ -73,7 +73,7 @@ class User extends CI_Controller
         $data['title'] = "Power";
         //get table users
         $email = $this->session->userdata('email');
-        $data['users'] = $this->db->get_where('users', ['email' => $email])->row_array();
+        $data['user'] = $this->db->get_where('users', ['email' => $email])->row_array();
 
         //check time out
         $data['active_check'] = $this->db->get_where('payment', ['email' => $email])->row_array();
