@@ -357,7 +357,7 @@ class Auth extends CI_Controller
                 'bukti' => $bukti,
                 'email' => $user['email'],
                 'purchase_date' => time(),
-                'time_out' => time() + 60 * 60 * 24 * 3,
+                'role_payment' => 0,
             ];
 
             $this->db->insert('payment', $data);

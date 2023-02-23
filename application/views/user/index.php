@@ -2,7 +2,7 @@
 
 $email = $this->session->userdata('email');
 
-$active_check = $this->db->get_where('payment', ['email' => $email])->row_array();
+$active_check = $this->db->get_where('user_active', ['email' => $email])->row_array();
 
 $waktuSekarang = time();
 
