@@ -32,8 +32,7 @@
     <link rel="stylesheet" href="<?= base_url('assets/') ?>css/bootstrap.min.css" />
     <link rel="stylesheet" href="<?= base_url('assets/') ?>css/animate.css" />
     <link rel="stylesheet" href="<?= base_url('assets/') ?>css/lineicons.css" />
-    <link rel="stylesheet" href="<?= base_url('assets/') ?>css/ud-styles.css" />
-    <link rel="stylesheet" href="<?= base_url('assets/') ?>css/my.css" />
+    <link rel="stylesheet" href="<?= base_url('assets/') ?>css/test.css" />
 </head>
 
 <body>

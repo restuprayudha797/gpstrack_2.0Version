@@ -4,14 +4,11 @@
       <div class="row">
         <div class="col-lg-12">
           <div class="ud-hero-content wow fadeInUp" data-wow-delay=".2s">
-            <h1 class="ud-hero-desc fs-4">
-              We are GPS Agency
-            </h1>
             <p class="ud-hero-title">
               The Easiest Step to Safety
             </p>
             <p class="col-sm-10 col-md-6 ud-hero-desc">
-              Use gps tracking for the save of your motorcycle security
+              GPS tracker for the safety of your vehicle
             </p>
           </div>
 
@@ -53,12 +50,12 @@
         <div class="col-xl-3 col-lg-3 col-sm-6">
           <div class="ud-single-feature wow fadeInUp" data-wow-delay=".1s">
             <div class="ud-feature-icon mx-auto mb-4">
-              <i class="lni lni-gift"></i>
+              <i class="lni lni-travel"></i>
             </div>
             <div class="ud-feature-content">
-              <h3 class="ud-feature-title">Free and Open-Source</h3>
+              <h3 class="ud-feature-title">Realtime tracking</h3>
               <p class="ud-feature-desc">
-                Lorem Ipsum is simply dummy text of the printing and industry.
+                Monitoring the real location of the vehicle.
               </p>
               <a href="javascript:void(0)" class="ud-feature-link">
                 Learn More
@@ -69,12 +66,12 @@
         <div class="col-xl-3 col-lg-3 col-sm-6">
           <div class="ud-single-feature wow fadeInUp" data-wow-delay=".15s">
             <div class="ud-feature-icon mx-auto mb-4">
-              <i class="lni lni-move"></i>
+              <i class="lni lni-alarm-clock"></i>
             </div>
             <div class="ud-feature-content">
-              <h3 class="ud-feature-title">Multipurpose Template</h3>
+              <h3 class="ud-feature-title">24 hour work</h3>
               <p class="ud-feature-desc">
-                Lorem Ipsum is simply dummy text of the printing and industry.
+                This tool works 24 hours non-stop which aims to minimize late losses.
               </p>
               <a href="javascript:void(0)" class="ud-feature-link">
                 Learn More
@@ -85,12 +82,12 @@
         <div class="col-xl-3 col-lg-3 col-sm-6">
           <div class="ud-single-feature wow fadeInUp" data-wow-delay=".2s">
             <div class="ud-feature-icon mx-auto mb-4">
-              <i class="lni lni-layout"></i>
+              <i class="lni lni-power-switch"></i>
             </div>
             <div class="ud-feature-content">
-              <h3 class="ud-feature-title">High-quality Design</h3>
+              <h3 class="ud-feature-title">Cut-off engine</h3>
               <p class="ud-feature-desc">
-                Lorem Ipsum is simply dummy text of the printing and industry.
+                Forcibly turn off the vehicle, when your vehicle is stolen.
               </p>
               <a href="javascript:void(0)" class="ud-feature-link">
                 Learn More
@@ -101,12 +98,12 @@
         <div class="col-xl-3 col-lg-3 col-sm-6">
           <div class="ud-single-feature wow fadeInUp" data-wow-delay=".25s">
             <div class="ud-feature-icon mx-auto mb-4">
-              <i class="lni lni-layers"></i>
+              <i class="lni lni-volume-high "></i>
             </div>
             <div class="ud-feature-content">
-              <h3 class="ud-feature-title">All Essential Elements</h3>
+              <h3 class="ud-feature-title">Speaker mode</h3>
               <p class="ud-feature-desc">
-                Lorem Ipsum is simply dummy text of the printing and industry.
+                Talking using a vehicle horn that can trigger a crowd by calling a GPS device
               </p>
               <a href="javascript:void(0)" class="ud-feature-link">
                 Learn More
