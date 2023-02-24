@@ -83,8 +83,8 @@ class Admin extends CI_Controller
             } elseif ($payment['package'] == 2) {
 
                 $time = time() + 60 * 60 * 24 * 30;
-            }elseif ($payment['package'] == 3) {
-               
+            } elseif ($payment['package'] == 3) {
+
                 $time = time() + 60 * 60 * 24 * 360;
             }
 
@@ -119,105 +119,102 @@ class Admin extends CI_Controller
             $data = [
                 'is_payment' => 1,
             ];
-    
+
             $this->db->where('email', $payment['email']);
             $this->db->update('users', $data);
 
             // end update is_active user
 
-            
-                            // Separate the @ character in the email
-                            $preliminaryData = $payment['email'];
 
-                            // the results of splitting values ​​on email
-                            $emailValue = explode("@", $preliminaryData);
-            
-                    // add new table for user tracking
-                    $tbMarker = [
-                        'id' => [
-                                'type' => 'INT',
-                                'constraint' => 11,
-                                'auto_increment' => TRUE
-                        ],
-                        'lat' => [
-                                'type' => 'VARCHAR',
-                                'constraint' => '128'
-                              
-                        ],
-                        'lng' => [
-                                'type' =>'VARCHAR',
-                                'constraint' => '128'
-                                
-                        ],
-                        'spd' => [
-                                'type' => 'VARCHAR',
-                                'constraint' => '128'
-            
-                              
-                        ],
-                        'datetime' => [
-                                'type' => 'DATETIME'
-                                
-            
-                              
-                                ]
-                    ];
-                    $this->dbforge->add_key('id', TRUE);
-            
-                $this->dbforge->add_field($tbMarker);
-                $this->dbforge->create_table('tb_marker_' . $emailValue[0]);
-                // end add table tracking
-            
-            
-                        // add new table for user power
-                        $ledStatus = [
-                            'ID' => [
-                                    'type' => 'INT',
-                                    'constraint' => 11,
-                                    'auto_increment' => TRUE
-                            ],
-                            'color' => [
-                                    'type' => 'VARCHAR',
-                                    'constraint' => '20'
-                            
-                            ],
-                            'state' => [
-                                    'type' =>'INT',
-                                    'constraint' => '1'
-                                    
-                            ]
-                        ];
-                        $this->dbforge->add_key('ID', TRUE);
-                
-                    $this->dbforge->add_field($ledStatus);
-                    $this->dbforge->create_table('ledStatus_' . $emailValue[0]);
-            
-                    $data1 = [
-                        'color' => 'blue',
-                        'state' => '1'
-                ];
-                $this->db->insert('ledStatus_' . $emailValue[0], $data1);
-            
-                    $data2 = [
-                        'color' => 'red',
-                        'state' => '1'
-                ];
-                $this->db->insert('ledStatus_' . $emailValue[0], $data2);
-            
-                    $data3 = [
-                        'color' => 'green',
-                        'state' => '1'
-                ];
-                
-            
-                $this->db->insert('ledStatus_' . $emailValue[0], $data3);
-                    
-            
-                    // end add table power
+            // Separate the @ character in the email
+            $preliminaryData = $payment['email'];
+
+            // the results of splitting values ​​on email
+            $emailValue = explode("@", $preliminaryData);
+
+            // add new table for user tracking
+            $tbMarker = [
+                'id' => [
+                    'type' => 'INT',
+                    'constraint' => 11,
+                    'auto_increment' => TRUE
+                ],
+                'lat' => [
+                    'type' => 'VARCHAR',
+                    'constraint' => '128'
+
+                ],
+                'lng' => [
+                    'type' => 'VARCHAR',
+                    'constraint' => '128'
+
+                ],
+                'spd' => [
+                    'type' => 'VARCHAR',
+                    'constraint' => '128'
 
 
-             
+                ],
+                'datetime' => [
+                    'type' => 'DATETIME'
 
+
+
+                ]
+            ];
+            $this->dbforge->add_key('id', TRUE);
+
+            $this->dbforge->add_field($tbMarker);
+            $this->dbforge->create_table('tb_marker_' . $emailValue[0]);
+            // end add table tracking
+
+
+            // add new table for user power
+            $ledStatus = [
+                'ID' => [
+                    'type' => 'INT',
+                    'constraint' => 11,
+                    'auto_increment' => TRUE
+                ],
+                'color' => [
+                    'type' => 'VARCHAR',
+                    'constraint' => '20'
+
+                ],
+                'state' => [
+                    'type' => 'INT',
+                    'constraint' => '1'
+
+                ]
+            ];
+            $this->dbforge->add_key('ID', TRUE);
+
+            $this->dbforge->add_field($ledStatus);
+            $this->dbforge->create_table('ledStatus_' . $emailValue[0]);
+
+            $data1 = [
+                'color' => 'blue',
+                'state' => '1'
+            ];
+            $this->db->insert('ledStatus_' . $emailValue[0], $data1);
+
+            $data2 = [
+                'color' => 'red',
+                'state' => '1'
+            ];
+            $this->db->insert('ledStatus_' . $emailValue[0], $data2);
+
+            $data3 = [
+                'color' => 'green',
+                'state' => '1'
+            ];
+
+
+            $this->db->insert('ledStatus_' . $emailValue[0], $data3);
+
+
+            // end add table power
+            $message = 'Akun anda telah di aktifasi silahkan login, dan Terimakasih telah percaya untuk menggunakan layanan kami';
         }
 
         $data = [
@@ -227,52 +224,40 @@ class Admin extends CI_Controller
         $this->db->where('id_payment', $id);
         $this->db->update('payment', $data);
 
-               // send email aktif
-                $message = 'Akun anda telah di aktifasi silahkan login, dan Terimakasih telah percaya untuk menggunakan layanan kami';
-               // end send email aktif
+        $config = [
+
+            'protocol' => 'smtp',
+            'smtp_host' => 'ssl://mail.gpstracklimbungan.site',
+            'smtp_user' => 'gpstracker@gpstracklimbungan.site',
+            'smtp_pass' => '^*}-OczG9Tu1',
+            'smtp_port' => 465,
+            'mailtype' => 'html',
+            'charset' => 'utf-8',
+            'newline' => "\r\n"
 
 
-        redirect('admin/payment');
-    }
-    // end Konfirmasi Action
 
-        // ===== START SEND EMAIL =====
+        ];
 
-        private function _sendEmail($message, $email)
-        {
-    
-            $config = [
-    
-                'protocol' => 'smtp',
-                'smtp_host' => 'ssl://mail.gpstracklimbungan.site',
-                'smtp_user' => 'gpstracker@gpstracklimbungan.site',
-                'smtp_pass' => '^*}-OczG9Tu1',
-                'smtp_port' => 465,
-                'mailtype' => 'html',
-                'charset' => 'utf-8',
-                'newline' => "\r\n"
-    
-            ];
-    
-            $this->load->library('email', $config);
-    
-            $this->email->from('gpstracker@gpstracklimbungan.site', 'Gpstracklimbungan');
-            $this->email->to($email);
-            $this->email->subject('Akun verifikasi');
-    
-            if ($type == 'verify') {
-    
-                $this->email->message($message);
-            }
-    
-            if ($this->email->send()) {
-                return true;
-            } else {
-                echo $this->email->print_debugger();
-            }
+
+        $this->load->library('email', $config);
+
+        $this->email->from('gpstracker@gpstracklimbungan.site', 'Gpstracklimbungan');
+        $this->email->to($payment['email']);
+        $this->email->subject('Konfirmasi');
+        $this->email->message($message);
+
+        if ($this->email->send()) {
+            return true;
+        } else {
+            echo $this->email->print_debugger();
+
+
+            // redirect('admin/payment');
         }
-    
-        // ===== END SEND EMAIL =====
+        // end Konfirmasi Action
+    }
+
 
 
 

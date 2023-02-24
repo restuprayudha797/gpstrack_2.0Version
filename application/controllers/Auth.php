@@ -185,10 +185,6 @@ class Auth extends CI_Controller
 
 
         $this->_sendEmail($token, 'verify');
-
-
-        $this->session->set_flashdata('auth_message', '<div class="alert alert-success" role="alert"> Akun anda berhasil dibuat silahkan cek email anda dan lakukan aktifasi</div>');
-        redirect('auth');
     }
 
     // ===== END REGISTER =====
@@ -231,8 +227,10 @@ class Auth extends CI_Controller
 
         if ($this->email->send()) {
             return true;
+            $this->session->set_flashdata('auth_message', '<div class="alert alert-success" role="alert"> Akun anda berhasil dibuat silahkan cek email anda dan lakukan aktifasi</div>');
         } else {
             echo $this->email->print_debugger();
+            $this->session->set_flashdata('auth_message', '<div class="alert alert-danger" role="alert"> Akun anda gagal dibuat silahkan cek email anda dan lakukan aktifasi</div>');
         }
     }
 
