@@ -231,7 +231,6 @@
       var filename = path.replace(/^.*[\\\/]/, '').split('.').slice(0, -1).join('.');
       document.getElementById("filename").innerHTML = filename;
     }
-
     function removeUpload() {
       $('#preview').hide();
     }

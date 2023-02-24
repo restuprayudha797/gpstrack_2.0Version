@@ -10,19 +10,24 @@
             <p class="ud-hero-title">
               The Easiest Step to Safety
             </p>
-            <p class="col-6 ud-hero-desc ">
+            <p class="col-sm-10 col-md-6 ud-hero-desc">
               Use gps tracking for the save of your motorcycle security
             </p>
           </div>
-          <div class="my-hero-image wow fadeInUp" data-wow-delay=".25s">
-            <!-- <div class="circle circle-1"></div> -->
-            <div class="circle circle-2">
-              <img src="<?= base_url('assets/') ?>img/gps.png" width="500px" alt="hero-image" />
+
+          <div class="hero-image d-flex wow fadeInUp" data-wow-delay=".25s">
+            <div class="apa1n"></div>
+            <div class="apa1"></div>
+            <div class="apa">
+              <img src="<?= base_url('assets/') ?>img/gps.png" alt="gps-image" />
             </div>
+            <div class="apa2"></div>
+            <div class="apa2n"></div>
             <!-- <div class="circle circle-3"></div> -->
             <!-- <img src="<?= base_url('assets/') ?>images/hero/dotted-shape.svg" alt="shape" class="shape shape-1" /> -->
             <!-- <img src="<?= base_url('assets/') ?>images/hero/dotted-shape.svg" alt="shape" class="shape shape-2" /> -->
           </div>
+
         </div>
       </div>
     </div>
