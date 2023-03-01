@@ -6,8 +6,8 @@
         <div class="copyright text-center text-md-start">
           <p class="text-sm">
             Designed and Developed by
-            <a href="https://plainadmin.com" rel="nofollow" target="_blank">
-              PlainAdmin
+            <a href="" rel="nofollow" target="_blank">
+              gpstracklimbungan.site
             </a>
           </p>
         </div>
@@ -44,8 +44,13 @@
 <script src="<?= base_url('assets-admin/') ?>js/main.js"></script>
 <!-- Jquery -->
 <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<script src="https://cdn.datatables.net/1.13.3/js/jquery.dataTables.min.js"></script>
 
 <script>
+  let table = new DataTable('#myTable', {
+    // options
+  });
+
   $('#power-switch').on('click', function() {
     const power = $(this).data('power');
 

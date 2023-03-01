@@ -93,7 +93,7 @@
                     <a href="https://ayroui.com/" rel="nofollow noopner" target="_blank">Ayro UI</a>
                   </li>
                   <li>
-                    <a href="https://graygrids.com/" rel="nofollow noopner" target="_blank">Plain Admin</a>
+                    <a href="" rel="nofollow noopner" target="_blank">gpstracklimbungan.site</a>
                   </li>
                 </ul>
               </div>
@@ -231,6 +231,7 @@
       var filename = path.replace(/^.*[\\\/]/, '').split('.').slice(0, -1).join('.');
       document.getElementById("filename").innerHTML = filename;
     }
+
     function removeUpload() {
       $('#preview').hide();
     }

@@ -89,13 +89,12 @@ class Admin extends CI_Controller
             }
 
             $data = [
-                'package' => payment['package'],
+                'package' => $payment['package'],
                 'purchase_date' => time(),
                 'time_out' => $time
 
             ];
 
-            $message = 'Akun anda telah di aktifasi silahkan login, dan Terimakasih telah percaya untuk menggunakan layanan kami';
 
 
             $this->db->where('email', $payment['email']);
@@ -214,7 +213,6 @@ class Admin extends CI_Controller
 
 
             // end add table power
-            $message = 'Akun anda telah di aktifasi silahkan login, dan Terimakasih telah percaya untuk menggunakan layanan kami';
         }
 
         $data = [
@@ -233,9 +231,7 @@ class Admin extends CI_Controller
             'smtp_port' => 465,
             'mailtype' => 'html',
             'charset' => 'utf-8',
-            'newline' => "\r\n"
-
-
+            'newline' => '\r\n'
 
         ];
 
@@ -244,13 +240,19 @@ class Admin extends CI_Controller
 
         $this->email->from('gpstracker@gpstracklimbungan.site', 'Gpstracklimbungan');
         $this->email->to($payment['email']);
-        $this->email->subject('Konfirmasi');
-        $this->email->message($message);
+        $this->email->subject('Konformasi');
+
+        $this->email->message('Terimakasih sudah membeli produk kami dan langganan anda sudah di perpanjang. Terimakasih...');
+
 
         if ($this->email->send()) {
-            return true;
+
+            $this->session->set_flashdata('admin_message', '<div class="alert alert-success" role="alert">Data pembayaran berhasil di konfirmasi</div>');
+            redirect('admin/payment');
         } else {
             echo $this->email->print_debugger();
+
+            echo '<div class="alert alert-danger" role="alert">Mohon Maaf Sistem saat ini sedang sibuk silahkan hubungi developer = 081224974571 Sekali lagi mohon maaf atas ketidak nyamanan nya terimakasih...</b></div>';
 
 
             // redirect('admin/payment');
