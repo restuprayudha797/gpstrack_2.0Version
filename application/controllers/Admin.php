@@ -32,8 +32,7 @@ class Admin extends CI_Controller
 
     public function index()
     {
-        // Disini untuk dasboard admin ya yas
-        // iya yud
+
 
         //get table users
         $data['title'] = "User Data";
@@ -43,6 +42,7 @@ class Admin extends CI_Controller
         $this->load->view('dashboard/sidebar', $data);
         $this->load->view('dashboard/navbar', $data);
         $this->load->view('admin/index', $data);
+
         $this->load->view('dashboard/footer');
     }
 
