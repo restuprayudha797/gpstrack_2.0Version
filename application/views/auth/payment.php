@@ -2,6 +2,8 @@
 
 $checkPayment = $this->db->get_where('payment', ['email' => $this->session->userdata('email')])->row_array();
 
+$user = $this->db->get_where('users', ['email' => $this->session->userdata('email')])->row_array();
+
 
 
 ?>
@@ -25,16 +27,37 @@ $checkPayment = $this->db->get_where('payment', ['email' => $this->session->user
   <div class="container">
     <div class="row justify-content-center my-5">
       <div class="col-lg-6">
-        <div class="ud-login-logo text-center mb-3">
-          <h1>Total Bayar Rp. 270.000</h1>
-          <?= $this->session->flashdata('auth_message') ?>
-        </div>
-
         <?php if ($checkPayment) : ?>
 
-          <h1>Halaman Tunggu Konfirmasi admin</h1>
+          <div class="  text-center">
+
+            <div class="card text-center mt-4">
+              <div class="card-header">
+                Pembayaran Berhasil
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Terimakasih kepada <?= $user['name'] ?> Telah melakukan
+                  pembayaran</h5>
+                <p class="card-text">mohon ditunggu karena Proses membutuhkan waktu selama 1x24 jam untuk
+                  melakukan konfirmasi informasi selanjutnya akan kami kirim Kepada Email anda:
+                  <b> <?= $user['email'] ?></b>
+                </p>
+                <a href="#" class="badge bg-primary">Chat admin</a>
+              </div>
+              <div class="card-footer text-muted">
+                Terimakasih telah menggunakan produk kami
+              </div>
+            </div>
+
+          </div>
 
         <?php else : ?>
+          <div class="ud-login-logo text-center mb-3">
+            <h1>Total Bayar Rp. 270.000</h1>
+            <?= $this->session->flashdata('auth_message') ?>
+          </div>
+
+
 
           <?= form_open_multipart('auth/pay'); ?>
           <!-- Tombol Upload Tidak dapat di tekan -->

@@ -66,8 +66,6 @@ class Admin extends CI_Controller
     public function Konfirmasi($id)
     {
 
-
-
         $this->load->dbforge();
 
 
@@ -101,14 +99,13 @@ class Admin extends CI_Controller
             $this->db->update('payment', $data);
         } else {
 
-
             // insert data to user_active
 
             $data = [
                 'email' => $payment['email'],
                 'package' => $payment['package'],
                 'purchase_date' => time(),
-                'time_out' => time() + 60 * 60 * 24 * 3
+                'time_out' => time() + 60 * 60 * 24 * 90
             ];
             $this->db->insert('user_active', $data);
 

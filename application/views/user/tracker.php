@@ -59,6 +59,9 @@ foreach ($koordinat as $location) {
 
       <?php else : ?>
 
+        <div class="waktu mb-3">
+          <p><b>Terakhir dilihat pada : </b> <?= ' ' . $waktu ?></p>
+        </div>
         <div style="width: 100%">
           <iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=<?= $lat . ',' . $lng ?>&output=embed"><a href="https://www.maps.ie/distance-area-calculator.html">area maps</a></iframe>
         </div>
