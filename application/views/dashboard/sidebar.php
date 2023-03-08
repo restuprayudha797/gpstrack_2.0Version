@@ -203,7 +203,7 @@
       <nav class="sidebar-nav">
         <ul>
           <li class="nav-item nav-item-has-children">
-            <a href="<?= base_url('user') ?>" class="" data-bs-toggle="collapse" data-bs-target="#menu_1" aria-controls="menu_1" aria-expanded="true" aria-label="Toggle navigation">
+            <a href="<?= base_url('user') ?>"  data-bs-toggle="collapse" data-bs-target="#menu_1" aria-controls="menu_1" aria-expanded="true" aria-label="Toggle navigation">
               <span class="icon">
                 <i class="lni lni-database fw-bold"></i>
               </span>
