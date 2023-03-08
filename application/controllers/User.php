@@ -85,19 +85,35 @@ class User extends CI_Controller
         $this->load->view('dashboard/footer');
     }
 
-    public function powerOn()
+    public function on()
     {
-        $this->db->where('state', 1);
-        $this->db->insert('ledstatus_muhammadrestuprayudha797');
 
-        redirect('home/power');
+        $email = $this->session->userdata('email');
+
+        $emailName = explode('@', $email);
+
+        $dbStateName = $emailName[0];
+
+        $this->db->set('state', 1);
+        $this->db->update('ledstatus_' . $dbStateName);
+
+
+
+        redirect('user/power');
     }
-
-    public function powerOff()
+    public function Off()
     {
-        $this->db->set('state', 0);
-        $this->db->update('ledstatus_muhammadrestuprayudha797');
+        $email = $this->session->userdata('email');
 
-        redirect('home/power');
+        $emailName = explode('@', $email);
+
+        $dbStateName = $emailName[0];
+
+        $this->db->set('state', 0);
+        $this->db->update('ledstatus_' . $dbStateName);
+
+
+
+        redirect('user/power');
     }
 }

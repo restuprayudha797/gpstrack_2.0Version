@@ -2,10 +2,25 @@
 
 $email = $this->session->userdata('email');
 
+$emailName = explode('@', $email);
+
+$dbStateName = $emailName[0];
+
+
 $active_check = $this->db->get_where('user_active', ['email' => $email])->row_array();
 
 
 $waktuSekarang = time();
+
+
+$states = $this->db->get('ledstatus_' . $dbStateName)->result_array();
+
+foreach ($states as $state) {
+  $colorState = $state['state'];
+}
+
+
+
 
 
 
@@ -51,38 +66,43 @@ $waktuSekarang = time();
 
       <?php else : ?>
         <div class="container">
-          <div class="pwer-switch mx-auto mt-4 d-block">
-            <input id="power-switch" type="checkbox" data-state="1" autofocus/>
-            <div class="button">
-              <svg class="power-off">
-                <use xlink:href="#line" class="line" />
-                <use xlink:href="#circle" class="circle" />
-              </svg>
-              <svg class="power-on">
-                <use xlink:href="#line" class="line" />
-                <use xlink:href="#circle" class="circle" />
-              </svg>
+
+          <div class="container p-5 border text-center">
+
+            <div class="titile">
+              <h6></h6>Klick tombol dibawah ini untuk mengidupkan atau mematikan motor</h6>
             </div>
-            <div class="tombol text-center">
-              <h1></h1>
-            </div>
+            <?php if ($colorState == 1) : ?>
+              <div class="gambar mt-3">
+                <a href="<?= base_url('user/off') ?>">
+                  <img src="<?= base_url('assets/images/power/on.png') ?>" width="100px" alt="">
+                </a>
+                <br>
+                <b class="mt-3">Hidup</b>
+              </div>
+
+            <?php else : ?>
+
+              <div class="gambar mt-3">
+                <a href="<?= base_url('user/on') ?>">
+                  <img src="<?= base_url('assets/images/power/off.png') ?>" width="100px" alt="">
+                </a>
+                <br>
+                <b class="mt-3">Mati</b>
+              </div>
+
+            <?php endif ?>
+
+
           </div>
+
+
+
+        <?php endif; ?>
+        <!-- End Content -->
+
+        <!-- ========== title-wrapper end ========== -->
         </div>
-
-        <!-- SVG -->
-        <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-          <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150" id="line">
-            <line x1="75" y1="34" x2="75" y2="58" />
-          </symbol>
-          <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150" id="circle">
-            <circle cx="75" cy="80" r="35" />
-          </symbol>
-        </svg>
-      <?php endif; ?>
-      <!-- End Content -->
-
-      <!-- ========== title-wrapper end ========== -->
-    </div>
-    <!-- end container -->
+        <!-- end container -->
 </section>
 <!-- ========== section end ========== -->
