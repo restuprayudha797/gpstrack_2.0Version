@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="<?= base_url('assets-admin/') ?>css/fullcalendar.css" />
   <link rel="stylesheet" href="<?= base_url('assets-admin/') ?>css/fullcalendar.css" />
   <link rel="stylesheet" href="<?= base_url('assets-admin/') ?>css/main.css" />
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.3/css/jquery.dataTables.min.css" />
   <style>
     .power-switch {
       --color-invert: blue;
@@ -229,7 +230,7 @@
               <span class="text">Laporan</span>
             </a>
           </li>
-          
+
           <span class="divider">
             <hr />
           </span>

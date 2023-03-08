@@ -211,6 +211,7 @@ class Auth extends CI_Controller
         ];
 
 
+
         $this->load->library('email', $config);
 
         $this->email->from('gpstracker@gpstracklimbungan.site', 'Gpstracklimbungan');
@@ -226,11 +227,12 @@ class Auth extends CI_Controller
 
 
         if ($this->email->send()) {
-            return true;
             $this->session->set_flashdata('auth_message', '<div class="alert alert-success" role="alert"> Akun anda berhasil dibuat silahkan cek email anda dan lakukan aktifasi</div>');
+            redirect('auth');
         } else {
             echo $this->email->print_debugger();
-            $this->session->set_flashdata('auth_message', '<div class="alert alert-danger" role="alert"> Akun anda gagal dibuat silahkan cek email anda dan lakukan aktifasi</div>');
+
+            echo '<div class="alert alert-danger" role="alert">Mohon Maaf Sistem saat ini sedang sibuk silahkan hubungi admin dan lakukan registrasi secara manuak dengak mengklick link di <a href="http://localhost/gpstracklimbungan.site/home/contact"></a><b>Sekali lagi mohon maaf atas ketidak nyamanan nya terimakasih...</b></div>';
         }
     }
 
