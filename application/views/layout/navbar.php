@@ -33,6 +33,9 @@
                   <li class="nav-item">
                     <a class="ud-menu-scroll" href="#contact">Contact</a>
                   </li>
+                  <li class="nav-item">
+                    <a class="ud-menu-scroll" href="<?= base_url('auth') ?>">Sign In</a>
+                  </li>
                 <?php else : ?>
                   <li class="nav-item">
                     <a href="<?= base_url('home') ?>#home">Home</a>
@@ -49,6 +52,7 @@
                   <li class="nav-item">
                     <a href="<?= base_url('home') ?>#contact">Contact</a>
                   </li>
+                  
 
                 <?php endif; ?>
                 <!-- <li class="nav-item nav-item-has-children">

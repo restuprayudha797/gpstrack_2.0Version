@@ -38,11 +38,7 @@
         <div class="col-lg-12">
           <div class="ud-section-title mx-auto text-center">
             <span>Features</span>
-            <h2>Main Features of Play</h2>
-            <p>
-              There are many variations of passages of Lorem Ipsum available
-              but the majority have suffered alteration in some form.
-            </p>
+            <h2>Main Features our GPS</h2>
           </div>
         </div>
       </div>
@@ -154,81 +150,77 @@
         <div class="col-lg-12">
           <div class="ud-section-title mx-auto text-center">
             <span>Pricing</span>
-            <h2>Our Pricing Plans</h2>
-            <p>
-              There are many variations of passages of Lorem Ipsum available
-              but the majority have suffered alteration in some form.
-            </p>
+            <h2>Our Pricing</h2>
           </div>
         </div>
       </div>
 
       <div class="row g-0 align-items-center justify-content-center">
-        <div class="col-lg-4 col-md-6 col-sm-10">
+        <div class="col-lg-4 col-md-10 col-sm-10">
           <div class="ud-single-pricing first-item wow fadeInUp" data-wow-delay=".15s">
             <div class="ud-pricing-header">
               <h3>STARTING FROM</h3>
-              <h4>$ 19.99/mo</h4>
+              <h4>Rp. 10.000/day</h4>
             </div>
             <div class="ud-pricing-body">
-              <ul>
+              <!-- <ul>
                 <li>5 User</li>
                 <li>All UI components</li>
                 <li>Lifetime access</li>
                 <li>Free updates</li>
                 <li>Use on 1 (one) project</li>
                 <li>4 Months support</li>
-              </ul>
+              </ul> -->
             </div>
             <div class="ud-pricing-footer">
-              <a href="javascript:void(0)" class="ud-main-btn ud-border-btn">
+              <a href="<?= base_url('purchase'); ?>" class="ud-main-btn ud-border-btn">
                 Purchase Now
               </a>
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 col-sm-10">
+        <div class="col-lg-4 col-md-10 col-sm-10">
           <div class="ud-single-pricing active wow fadeInUp" data-wow-delay=".1s">
-            <span class="ud-popular-tag">POPULAR</span>
+            <span class="ud-popular-tag">RECOMMENDED</span>
             <div class="ud-pricing-header">
               <h3>STARTING FROM</h3>
-              <h4>$ 30.99/mo</h4>
+              <h4>Rp. 350.000/year</h4>
             </div>
             <div class="ud-pricing-body">
-              <ul>
+              <!-- <ul>
                 <li>5 User</li>
                 <li>All UI components</li>
                 <li>Lifetime access</li>
                 <li>Free updates</li>
                 <li>Use on 1 (one) project</li>
                 <li>4 Months support</li>
-              </ul>
+              </ul> -->
             </div>
             <div class="ud-pricing-footer">
-              <a href="javascript:void(0)" class="ud-main-btn ud-white-btn">
+              <a href="<?= base_url('purchase'); ?>" class="ud-main-btn ud-white-btn">
                 Purchase Now
               </a>
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 col-sm-10">
+        <div class="col-lg-4 col-md-10 col-sm-10">
           <div class="ud-single-pricing last-item wow fadeInUp" data-wow-delay=".15s">
             <div class="ud-pricing-header">
               <h3>STARTING FROM</h3>
-              <h4>$ 70.99/mo</h4>
+              <h4>Rp. 35.000/month</h4>
             </div>
             <div class="ud-pricing-body">
-              <ul>
+              <!-- <ul>
                 <li>5 User</li>
                 <li>All UI components</li>
                 <li>Lifetime access</li>
                 <li>Free updates</li>
                 <li>Use on 1 (one) project</li>
                 <li>4 Months support</li>
-              </ul>
+              </ul> -->
             </div>
             <div class="ud-pricing-footer">
-              <a href="javascript:void(0)" class="ud-main-btn ud-border-btn">
+              <a href="<?= base_url('purchase'); ?>" class="ud-main-btn ud-border-btn">
                 Purchase Now
               </a>
             </div>
@@ -250,15 +242,11 @@
           <div class="ud-section-title text-center mx-auto">
             <span>FAQ</span>
             <h2>Any Questions? Answered</h2>
-            <p>
-              There are many variations of passages of Lorem Ipsum available
-              but the majority have suffered alteration in some form.
-            </p>
           </div>
         </div>
       </div>
 
-      <div class="row">
+      <!-- <div class="row">
         <div class="col-lg-6">
           <div class="ud-single-faq wow fadeInUp" data-wow-delay=".1s">
             <div class="accordion">
@@ -377,7 +365,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
   </section>
   <!-- ====== FAQ End ====== -->
@@ -516,15 +504,11 @@
           <div class="ud-section-title mx-auto text-center">
             <span>Our Team</span>
             <h2>Meet The Team</h2>
-            <p>
-              There are many variations of passages of Lorem Ipsum available
-              but the majority have suffered alteration in some form.
-            </p>
           </div>
         </div>
       </div>
 
-      <div class="row">
+      <div class="row justify-content-center">
         <div class="col-xl-4 col-lg-4 col-sm-6">
           <div class="ud-single-team wow fadeInUp" data-wow-delay=".1s">
             <div class="ud-team-image-wrapper">
@@ -536,8 +520,8 @@
               <img src="assets/images/team/shape-2.svg" alt="shape" class="shape shape-2" />
             </div>
             <div class="ud-team-info">
-              <h5>Adveen Desuza</h5>
-              <h6>UI Designer</h6>
+              <h5>Muhammad Restu Prayudha</h5>
+              <h6>Backend Developer</h6>
             </div>
             <ul class="ud-team-socials">
               <li>
@@ -569,8 +553,8 @@
               <img src="assets/images/team/shape-2.svg" alt="shape" class="shape shape-2" />
             </div>
             <div class="ud-team-info">
-              <h5>Jezmin uniya</h5>
-              <h6>Product Designer</h6>
+              <h5>Zidan Rafif Pratama</h5>
+              <h6>Founder GPS Track Limbungan</h6>
             </div>
             <ul class="ud-team-socials">
               <li>
@@ -602,8 +586,8 @@
               <img src="assets/images/team/shape-2.svg" alt="shape" class="shape shape-2" />
             </div>
             <div class="ud-team-info">
-              <h5>Andrieo Gloree</h5>
-              <h6>App Developer</h6>
+              <h5>Ilyas</h5>
+              <h6>Frontend Developer</h6>
             </div>
             <ul class="ud-team-socials">
               <li>
@@ -638,8 +622,7 @@
             <div class="ud-contact-title">
               <span>CONTACT US</span>
               <h2>
-                Let’s talk about <br />
-                Love to hear from you!
+                Let’s talk with us <br> about GPS Tracker!
               </h2>
             </div>
             <div class="ud-contact-info-wrapper">
@@ -649,7 +632,7 @@
                 </div>
                 <div class="ud-info-meta">
                   <h5>Our Location</h5>
-                  <p>401 Broadway, 24th Floor, Orchard Cloud View, London</p>
+                  <p>Jl. Kinibalu No.14, Rintis, Kec. Lima Puluh, Kota Pekanbaru, Riau 28156</p>
                 </div>
               </div>
               <div class="ud-single-info">
@@ -671,7 +654,7 @@
             <form class="ud-contact-form">
               <div class="ud-form-group">
                 <label for="fullName">Full Name*</label>
-                <input type="text" name="fullName" placeholder="Adam Gelius" />
+                <input type="text" name="fullName" placeholder="your name" />
               </div>
               <div class="ud-form-group">
                 <label for="email">Email*</label>
@@ -679,7 +662,7 @@
               </div>
               <div class="ud-form-group">
                 <label for="phone">Phone*</label>
-                <input type="text" name="phone" placeholder="+885 1254 5211 552" />
+                <input type="text" name="phone" placeholder="+62 852 1234 567" />
               </div>
               <div class="ud-form-group">
                 <label for="message">Message*</label>
