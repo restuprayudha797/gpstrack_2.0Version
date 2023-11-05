@@ -74,7 +74,7 @@ class Admin extends CI_Controller
 
 
         if ($userActive) {
-
+            
             if ($payment['package'] == 1) {
 
                 $time = time() + 60 * 60 * 24 * 7;

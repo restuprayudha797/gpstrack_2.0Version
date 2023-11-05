@@ -66,7 +66,7 @@ class Auth extends CI_Controller
             // Check if the passwords match
             if (password_verify($password, $user['password'])) {
 
-                // check the account whether it is active or not
+                // check the account whether it is de or not
                 if ($user['is_active'] == 1) {
 
                     // Check if the user has made a payment
